@@ -25,6 +25,7 @@
   </head>
   <body>
     <div class="main">
+      
       <!-- Header -->
       <header class="navbar navbar-static-top" role="banner" id="top" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
         <div class="container">
@@ -51,15 +52,35 @@
           </nav>
         </div>
       </header>
-      <!-- Footer -->
+
+      <!-- Content -->
       <section class="banner-intro">
         <div class="container">
-          <div class="banner-intro-content">
-            <p>Welcome to DelegateIt we provide peace of mind at home and abroad by providing you your own personal concierge.</p>
-            <a href="" class="btn btn-brand">Delegate Now</a>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="banner-intro-content section-intro">
+                <p>Welcome to DelegateIt we provide peace of mind at home and abroad by providing you your own personal concierge.</p>
+                <a href="" class="btn btn-brand">Delegate Now</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <section class="what-we-do section-template">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="section-intro">
+                <p>We’re pushing the envelope with traveling in the shared economy. 
+                  Uber unlocked transportation. HomeAway unlocked property. We unlock time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      <!-- Footer -->
       <footer>
         <div class="container">
           <a class="brand" href="#">

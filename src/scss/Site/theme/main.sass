@@ -3,6 +3,8 @@ $font-prelo-light:  'prelo-light', "Helvetica Neue", Helvetica, Arial, sans-seri
 $font-museo:  'museo-sans', "Helvetica Neue", Helvetica, Arial, sans-serif
 $font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
 
+$brand-gray: #404038
+
 @font-face 
   font-family: 'museo-sans'
   src: url('../fonts/MuseoSans-500.otf') 
@@ -22,6 +24,17 @@ $font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
   position: relative
   top: 50%
   transform: translateY(-50%)
+
+.section-template
+  padding: 100px 0
+  
+.section-intro
+  max-width: 900px
+  margin: 0 auto
+  text-align: center
+
+p
+  font-family: $font-prelo-medium
 
 
 header.navbar
@@ -48,14 +61,11 @@ header.navbar
           line-height: 25px
           text-transform: uppercase
 
-
+// First Section
 .banner-intro
   background: url(../images/banner-intro-background.jpg) center center no-repeat
   background-size: cover
   .banner-intro-content
-    text-align: center
-    margin: 0 auto
-    max-width: 900px
     p
       font-family: $font-prelo-light
       font-size: 36px
@@ -68,12 +78,19 @@ header.navbar
 
   @media (min-width: $screen-sm)
     min-height: 600px
-    .banner-intro-content
-      padding: 224px 0
+    padding: 224px 0
 
 
+// Second Section (what we do)
+.what-we-do
+  p
+    font-family: Prelo-ExtraLight
+    font-size: 27px
+    color: $brand-gray
+    line-height: 27px
 
-// Buttons
+
+// Misc
 .btn-brand
   font-family: $font-prelo-light
   color: #FFF
