@@ -1,586 +1,82 @@
-$font-family:  'museo-sans', "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-prelo-medium:  'prelo-medium', "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-prelo-light:  'prelo-light', "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-museo:  'museo-sans', "Helvetica Neue", Helvetica, Arial, sans-serif
 $font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
 
 @font-face 
   font-family: 'museo-sans'
-  src: url('../fonts/MuseoSans-500.otf') /* IE9 Compat Modes */
+  src: url('../fonts/MuseoSans-500.otf') 
 
-@keyframes scale
-  0%
-    transform: scale(0.7)
-  100%
-    transform: scale(1)
+@font-face 
+  font-family: $font-prelo-medium
+  src: url('../fonts/Prelo-Medium.otf')
 
-@keyframes floating
-  0%
-    margin-top: -5px
-  50%
-    margin-top: 0px
-  100%
-    margin-top: -5px
+@font-face 
+  font-family: $font-prelo-light
+  src: url('../fonts/Prelo-Light.otf')
 
+.main
+  font-family: $font-prelo-medium
 
-hr 
-  border-top: 1px solid #51555F
+.vertical-center
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
 
-
-h1 
-  font-family: $font-family
-  font-size: 71px
-  line-height: 84px
-  color: #FFFFFF
-  margin-bottom: 30px
-  @media (max-width: $screen-xs-max) 
-    font-size: 40px
-    line-height: 54px
-  @media (min-width: $screen-sm) 
-    margin-top: 50px
-
-
-h2 
-  font-family: $font-family-helvetica
-  font-size: 75px
-  color: #FFFFFF
-  line-height: 102px
-  margin: 50px 0
-  @media (max-width: $screen-xs-max) 
-    font-size: 38px
-    line-height: 58px
-
-
-h3 
-  font-family: $font-family
-  font-size: 45px
-  color: #2D2F35
-  line-height: 46px
-  margin: 40px 0
-  font-weight: 300
-  @media (max-width: $screen-xs-max) 
-    font-size: 36px
-    line-height: 38px
-
-
-p 
-  font-family: $font-family-helvetica
-  font-size: 22px
-  color: #747578
-  line-height: 33px
-  font-weight: 100
-
-
-a 
-  text-decoration: none !important
-  color: #7D7D7D
-  &:hover 
-    color: #26a0be
-
-.thank-you 
-  background: #2D2F35
-  background-image: radial-gradient(50% 100%, #373940 0%, #2D2F35 100%)
-  height: 100vh
-  a
-    color: #26a0be
-
-.type2
-  margin-top: -20px
-
-
-
-footer 
-  padding: 40px 0
-  a 
-    line-height: 15px
-    @media (min-width: $screen-sm)
-      padding-right: 40px
-  .brand
-    @media (min-width: $screen-sm)
-      float: left
-  @media (max-width: $screen-xs-max)
-    text-align: center
-    p
-      font-size: 18px
-
-
-.small 
-  transform: scale(.9)
-
-.blured
-  @media (min-width: $screen-sm)
-    -webkit-filter: blur(5px) !important
-    filter: blur(5px) !important
-
-.left-roll
-
-.right-roll
 
 header.navbar
-  border: none
-  padding: 20px 0
-  margin-bottom: 0
-  nav
-    margin-bottom: 0
-
-
-.navbar-default 
-  background-color: transparent
-  border: none
-  .navbar-nav >li > a 
-    background: #32C8DE !important
-    padding: 18px 35px
-    border-radius: 70px
-    font-family: 'museo-sans'
-    font-size: 15px
-    line-height: 18px
-    text-transform: uppercase
-    color: white !important
-    &:hover 
-      opacity: .8
-    
-  
-
-
-.navbar-collapse 
-  margin-top: 35px
-  @media (max-width: $screen-xs-max) 
-    margin-top: 20px
-    border: none
-    box-shadow: none
-  @media (min-width: $screen-sm) 
-    float: right
-  
-
-
-.btn 
-  color: #FFF !important
-  @include transition(all .2s)
-  &:hover 
-    opacity: .8
-  
-
-
-.navbar-header 
+  background-image: url(../images/header-background.jpg)
+  padding: 30px 0
+  border-bottom: 1px solid #FFF
+  margin: 0
   width: 100%
-  text-align: center
-
-
-input::-webkit-input-placeholder
-  color: #FFF
-
-
-input:-moz-placeholder 
-  color: #FFF
-
-
-.btn 
-  border-radius: 0
-  border: none
-  padding: 4px 15px
-  font-size: 100%
-
-.btn 
-  margin-top: 3px  
-.btn-lg 
-  font-size: 110%
-  padding: 15px 30px
-
-.btn-xl 
-  padding: 8px 3em
-  font-size: 120%
-  font-weight: 900
-  letter-spacing: 1px
-
-header .brand
-  cursor: default
-  img
-    max-width: 100%
-  @media (min-width: $screen-sm)
-    float: left
-
-
-.btn-brand 
-  background: #32C8DE
-  padding: 15px 40px
-  border-radius: 70px
-  font-family: 'museo-sans'
-  font-size: 15px
-  line-height: 18px
-  text-transform: uppercase
-  color: white
-
-
-.btn-brand-yellow 
-  background: #FFC539
-  padding: 15px 40px
-  border-radius: 70px
-  font-family: 'museo-sans'
-  font-size: 15px
-  line-height: 18px
-  text-transform: uppercase
-  color: white
-
-
-.submit 
-  background-color: white !important
-  color: #2BAFCA !important
-  padding-left: 0 !important
-  width: 280px !important
-  font-weight: 500 !important
-  margin: 60px 0 !important
-
-
-.btn-order 
-  border: 2px solid rgb(108, 14, 36)
-  color: rgb(108, 14, 36)
-  background-color: rgb(255, 255, 255)
-  font-weight: 600
-
-
-.text-tall 
-  text-transform: uppercase
-
-
-.text-center 
-  text-align: center
-
-
-.text-left 
-  text-align: left
-
-
-.text-right 
-  text-align: right
-
-
-.text-italic 
-  font-style: italic
-
-
-.tab 
-  padding-left: 30px
-
-
-.mobile 
-  @media (min-width: $screen-sm) 
-    display: none
-  
-.tablet 
-  @media (max-width: $screen-xs-max) 
-    display: none
-
-.desktop 
-  @media (max-width: $screen-sm-max) 
-    display: none
-  
-
-
-.horizontal-center 
-  margin: 0 auto
-
-
-.reduced-width
-  @media (min-width: $screen-sm)
-    width: 60%
-
-
-.header-block 
-  @include transition(all .8s)
-  opacity: 0
-  margin-top: -100px
-  &.shown
-    opacity: 1
-    margin-top: 0
-  @media (max-width: $screen-xs-max) 
-    padding: 20px 0 15px
-
-
-.right-extra-padding 
-  @media (min-width: $screen-sm) 
-    padding-right: 60px
-  
-
-
-.pushdown 
-  margin-top: 17px
-
-
-.push-far-down 
-  @media (min-width: $screen-sm) 
-    margin-top: 250px
-  
-  @media (max-width: $screen-xs-max) 
-    margin-top: 50px
-  
-
-
-.span-brand 
-  font-family: 'museo-sans'
-  font-size: 21px
-  color: #ffbc1a
-  line-height: 25px
-
-
-.phone-number 
-  font-family: 'museo-sans'
-  font-weight: 900
-  font-size: 84px
-  line-height: 68px
-  display: block
-  margin-top: 30px
   a
-    @include transition(all .2s ease-in-out)
-    color: #32C8DE
-    &:hover
-      text-shadow: 0 0 10px lighten(#32C8DE, 7%)
-
-  @media (max-width: $screen-xs-max) 
-    font-size: 42px
-
-
-
-.balloon 
-  background: url(../images/balloon.png) top left no-repeat
-  background-size: contain
-  min-height: 70px
-  p 
-    margin-left: 55px
-    padding-top: 7px
-    font-family: $font-family-helvetica
-    font-size: 41px
-    color: #2D2F35
-    line-height: 49px
-    font-weight: 300
-  @media (min-width: $screen-sm)
-    margin-left: -45px
-
-
-
-.section 
-  padding-top: 25px
-  padding-bottom: 25px
-  @media (min-width: $screen-sm)
-    padding-top: 50px
-    padding-bottom: 50px
-
-
-.first-section 
-  background: #2D2F35
-  background-image: radial-gradient(50% 100%, #373940 0%, #2D2F35 100%)
-  .down-arrow
-    @extend .text-center
-    @extend .col-lg-12
-    position: relative
-    z-index: 99
-    margin-top: 40px
-    a
-      animation: floating .8s infinite
-      display: block
-      i
-        border: 1px solid #FFF
-        border-radius: 100%
-        padding: 10px
-        font-size: 30px
-        color: #FFF
-    @media (max-width: $screen-md-max)
-      display: none
-  .row
-    margin-top: 20px
-  .container
-    max-height: 100%
-  .first-paragraph 
-    text-align: left
-    p 
-      font-family: $font-family
-      font-size: 24px
-      color: #FFFFFF
-      line-height: 31px
-    h1
-      margin-top: 0
-
-  .second-paragraph
-    @include transition(all 1s)
-    animation: scale 1s
-    img
-      max-width: 100%
-    @media (min-width: $screen-md)
-      margin-bottom: -100px
-    @media (max-width: $screen-sm-max)
-      margin-top: 20px
-      img
-        margin-top: 40px
-  @media (min-width: $screen-lg)
-    height: 765px
-  @media (min-width: $screen-sm)
-    text-align: right
-    padding-bottom: 50px
-
-
-.third-section 
-  background-color: #f4f4f4
-  padding-top: 30px
-  overflow: hidden
-  .right-roll
-    @include transition(all .8s)
-    position: relative
-  .messages
-    img 
-      margin-bottom: 15px
-      border: 2px solid #e6e6e6
-      max-width: 70%
-      @media (max-width: $screen-xs-max)
-        max-width: 60%
-
-  .tab-text 
-    p, h3 
-      padding-left: 150px
-    p 
-      margin: 15px 0
-    .bubble 
-      border: 1px solid #25B5D1
-      border-radius: 40px
-      h3 
-        font-family: 'museo-sans'
-        font-size: 41px
-        color: #2D2F35
-        line-height: 46px
-        letter-spacing: -3px
-        margin: 10px 0
-        @media (max-width: $screen-xs-max)
-          padding-left: 0
-          margin-left: 20px
-      h2 
+    color: #FFF
+  .brand
+    float: left
+  nav.nav-primary
+    float: right
+    margin-top: 22px
+  div.menu-primary-menu-container
+    ul
+      li.menu-item
         float: left
-        margin-left: 73px
-        margin-top: 10px
-        z-index: 500
-        position: relative
-        font-family: $font-family-helvetica
-        font-size: 41px
-        color: #FFFFFF
-        line-height: 49px
-      @media (min-width: $screen-sm)
-        margin-right: 50px
-      @media (max-width: $screen-xs-max)
-        width: 100%
-    .step-row 
-      min-height: 150px
-      margin-bottom: 30px
-      @media (max-width: $screen-xs-max)
-        p
-          padding-left: 0
-          margin-left: 20px
-    .got-questions
-      padding-left: 0
-      @media (min-width: $screen-sm)
-        font-size: 35px
-        line-height: 32px
-        margin-top: 80px
-        padding-left: 150px
-    @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
-      max-width: 80%
-      margin: 0 auto
-    @media (max-width: $screen-xs-max)
-      margin-top: 15px
-    @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
-      margin-top: 105px
+        a
+          font-family: $font-prelo-medium
+          font-size: 17px
+          color: #FFFFFF
+          line-height: 25px
+          text-transform: uppercase
 
-  .yellow-delegate
+
+.banner-intro
+  background: url(../images/banner-intro-background.jpg) center center no-repeat
+  background-size: cover
+  .banner-intro-content
     text-align: center
-    @media (min-width: $screen-sm)
-      text-align: right
+    margin: 0 auto
+    max-width: 900px
+    p
+      font-family: $font-prelo-light
+      font-size: 36px
+      color: #FFFFFF
+      line-height: 34px
+      margin-bottom: 35px
+    .btn-brand
+      font-size: 24px
+      min-width: 265px
 
-    
-  
-  
-  @media (min-width: $screen-md) 
-    .col-md-6 
-      float: none
-      display: inline-block
-      vertical-align: top
-
-
-.aqua-box 
-  background: #2BAFCA
-  text-align: center
-  -webkit-filter: blur(0px)
-  filter: blur(0px)
-  @include transition(all 2s)
-  h2 
-    padding: 50px 0
-    margin: 0
-  
-  hr 
-    border-top: 1px solid #52C2D9
-    margin-top: 0
-  
-  p 
-    margin-top: 60px
-    font-family: $font-family-helvetica
-    font-size: 22px
-    color: #FFFFFF
-    line-height: 33px
-  
-  form 
-    padding: 40px 0
-    @media (min-width: $screen-sm) 
-      width: 80%
-      padding: 90px 0
-    @media (max-width: $screen-xs-max) 
-      width: 100%
-
-  input 
-    height: 60px
-    width: 370px
-    padding-left: 40px
-    background-color: transparent
-    border: 1px solid #FFFFFF
-    border-radius: 40px
-    font-size: 28px
-    font-weight: 100
-    color: #FFFFFF
-    line-height: 31px
-    margin: 0 20px 20px
-    @media (max-width: $screen-xs-max)
-      margin: 15px 0
-      width: 100%
-  input[type="submit"]
-    display: block
-    margin: 25px auto !important
-  
+  @media (min-width: $screen-sm)
+    min-height: 600px
+    .banner-intro-content
+      padding: 224px 0
 
 
-.carousel-indicators 
-  bottom: -40px
-  li 
-    border: 1px solid #7b7b81
-  
-  .active 
-    background-color: #4eb9f6
-  
 
-
-.carousel-inner > .item > img 
-  max-width: 300px
-  display: table
-  margin: auto
-
-.second-section
-  @include transition(all .8s)
-  position: relative
-  .round-border 
-    text-align: center
-    width: 62px
-    font-size: 40px
-    border: 3px solid
-    border-radius: 35px
-
-
-.giant-logo 
-  position: absolute
-  top: -85px
-  left: -100px
-
-
-.links 
-  margin-top: 60px
-
-
+// Buttons
+.btn-brand
+  font-family: $font-prelo-light
+  color: #FFF
+  border: 1px solid #FFF
+  border-radius: 8px
+  text-transform: uppercase

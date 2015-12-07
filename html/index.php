@@ -24,87 +24,52 @@
     </script>
   </head>
   <body>
-    <div class="first-section">
-      <div class="container">
-        <!-- HEADER -->
-        <header class="navbar navbar-static-top" role="banner" id="top">
-          <nav class="navbar navbar-default">
-            <div class="navbar-header">
-              <a class="brand" href="#">
-                <img src="./images/logo-delegateit-gradient.png" title="DelegateIt" style="margin-top: 12px">
-              </a>
-              <div class="navbar-collapse" id="menus">
-                <a href="#" class="btn btn-lg btn-brand delegate-now">Sign up now</a>
-              </div>
+    <div class="main">
+      <!-- Header -->
+      <header class="navbar navbar-static-top" role="banner" id="top" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+        <div class="container">
+          <div class="brand">
+            <a class="brand" href="#">
+              <img src="./images/delegateit-logo-white.svg" title="Delegateit">
+            </a>
+          </div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menus">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <nav class="collapse navbar-collapse nav-primary" id="menus">
+            <div class="menu-primary-menu-container">
+              <ul id="menu-primary-menu" class="nav">
+                <li class="menu-item"><a href="">Platforms</a></li>
+                <li class="menu-item"><a href="">What we do</a></li>
+                <li class="menu-item"><a href="">Use us on vacation</a></li>
+                <li class="menu-item"><a href="" class="btn-brand">Delegate Now</a></li>
+              </ul>
             </div>
           </nav>
-        </header>
-        <hr><br>
-        <div class="row">
-          <div class="first-paragraph col-md-7">
-            <div class="header-block shown">
-              <h1 class="type">Any Delivery.<br>Any Task.</h1>
-              <p>DelegateIt allows you to delegate any task or delivery through a simple text conversation.</p>
-              <p>Text us your request to get started.</p>
-              <span class="phone-number"><a href="tel:5123563557">512-359-3557</a></span>
-            </div>
-          </div><!--
-       --><div class="second-paragraph col-md-5">
-            <img src="./images/iphone.png" alt="">
-          </div>
-          <div class="down-arrow">
-            <a href="#second-section"><i class="fa fa-chevron-down"></i></a>
+        </div>
+      </header>
+      <!-- Footer -->
+      <section class="banner-intro">
+        <div class="container">
+          <div class="banner-intro-content">
+            <p>Welcome to DelegateIt we provide peace of mind at home and abroad by providing you your own personal concierge.</p>
+            <a href="" class="btn btn-brand">Delegate Now</a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Second section -->
-    <div class="container section second-section" id="second-section">
-        <div class="row">
-          <div class="col-sm-12 right-extra-padding">
-            <h3>How it works</h3>
-            <p>We provide a 24/7 concierge service that is simple and quick to use.</p>
-            <p>Send us a text with your requests and one of our team members will reply with options. All billing is done through a secure Stripe link.</p>
+      </section>
+      <footer>
+        <div class="container">
+          <a class="brand" href="#">
+            <img src="./images/gray-logo.png" title="DelegateIt" style="margin-top: 12px">
+          </a>
+          <div class="pull-right links">
+            <p><a href="docs/privacy-policy.pdf" style="padding: 0;" target="_blank">Privacy Policy</a> | <a href="mailto:Contact@DelegateIt.co">Contact@DelegateIt.co</a></p>
           </div>
         </div>
+      </footer>
     </div>
-
-    <!-- Fourth section -->
-    <div class="aqua-box" id="delegate-form">
-      <div class="container">
-        <h2>delegate now</h2>
-        <div>
-          <hr>
-          <div class="horizontal-center reduced-width">
-            <p>Fill out the form and we will get back to you with a text message response. We look forward to helping you!</p>
-            <p style="display: none; color: #FF9D00; font-weight: 500;">Invalid phone number.</p>
-            <p style="display: none;">Thank you for signing up for our service!</p>
-          </div>
-          <form action="http://gator-api.elasticbeanstalk.com/core/customer?sendtext=true" method="post" class="horizontal-center">
-            <input type="text" id="first_name" name="first_name" placeholder="First Name">
-            <input type="text" id="last_name" name="last_name" placeholder="Last Name">
-            <input type="text" id="phone" name="phone" placeholder="Phone">
-            <input type="text" id="zip" name="zip" placeholder="Zip Code">
-            <!-- Using test URL temporarly -->
-            <input type="submit" value="Submit" class="submit">
-            <!-- <input type="submit" value="Submit" class="submit" action="http://backend-lb-125133299.us-west-2.elb.amazonaws.com/core/customer?sendtext=true" id="formid"> -->
-          </form>
-        </div>
-      </div>
-    </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <a class="brand" href="#">
-        <img src="./images/gray-logo.png" title="DelegateIt" style="margin-top: 12px">
-      </a>
-      <div class="pull-right links">
-        <p><a href="docs/privacy-policy.pdf" style="padding: 0;" target="_blank">Privacy Policy</a> | <a href="mailto:Contact@DelegateIt.co">Contact@DelegateIt.co</a></p>
-      </div>
-    </div>
-  </footer>
-
   </body>
 </html>

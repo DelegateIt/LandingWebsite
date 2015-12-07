@@ -1,4 +1,7 @@
 $(document).ready(function() {  
+
+  $('body').scrollspy({ target: '#navbar-example' });
+
 	$('input:not(.datepicker), textarea, select').focusin(function() {
 		placeHolder = $(this).attr('placeholder');
 		$(this).attr('placeholder', '');
