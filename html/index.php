@@ -77,6 +77,79 @@
               </div>
             </div>
           </div>
+          <div class="services clearfix">
+            <h2>We do it all</h2>
+            <div class="row">
+              <div class="col-sm-3">
+                <h5>Services</h5>
+                <ul class="services-list left"> 
+                  <li class="service-item">Maid Service</li>
+                  <li class="service-item">Dry Cleaning</li>
+                  <li class="service-item">Repair</li>
+                  <li class="service-item">Tutor</li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <h5>Delivery</h5>
+                <ul class="services-list middle"> 
+                  <li class="service-item">Food</li>
+                  <li class="service-item">Gifts</li>
+                  <li class="service-item">Daily Essentials</li>
+                  <li class="service-item">Dog Food</li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <h5>Logistics</h5>
+                <ul class="services-list middle-right"> 
+                  <li class="service-item">Trip Planning</li>
+                  <li class="service-item">Advice</li>
+                  <li class="service-item">How To...</li>
+                  <li class="service-item">Translating</li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <h5>Reservations</h5>
+                <ul class="services-list right"> 
+                  <li class="service-item">Restaurant</li>
+                  <li class="service-item">Event</li>
+                  <li class="service-item">Vacation Rental</li>
+                  <li class="service-item">Hotel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <h4>We unlock time.</h4>
+            </div>
+          </div>
+        </div> <!-- .container -->
+      </section>
+
+      <section class="mobile-app">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 message-bubbles">
+              <div class="message-left">
+                <p>I want a lamb and chicken overrice from Halal Bros</p>
+              </div>
+              <div class="message-right">
+                <p>Hey! I can get it delivered to your place in 35 minutes for $45, how does that sound?</p>
+              </div>
+              <div class="message-left small">
+                <p>Perfect! :)</p>
+              </div>
+            </div>
+            <div class="col-sm-6 app-description">
+              <h2>On the go mobile app</h2>
+              <p>Take DelegateIt with you on the go with our mobile application. Browse through quick orders options, save your favorites, and control your experience all through our easy to use interface.</p>
+              <div class="download-buttons">
+                <a href="http://apple.com"><img src="./images/app-store-button.jpg"></a>
+                <a href="http://apple.com"><img src="./images/google-play-button.jpg"></a>
+              </div>
+              <a href="http://apple.com" class="btn-fancy">Learn More About Our App</a>
+            </div>
+          </div>
         </div>
       </section>
      

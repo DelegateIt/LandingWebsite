@@ -63,4 +63,14 @@ $(document).ready(function() {
     });
   });
 
+  $(window).scroll(_.throttle(function() {
+    var scroll = $(window).scrollTop();
+    var halfheight = $(window).height() / 2;
+    
+    if (scroll > $('.message-bubbles').offset().top-halfheight) {
+      $('.message-bubbles').children().addClass('animated');
+    }
+
+  }, 500));
+
 });  
