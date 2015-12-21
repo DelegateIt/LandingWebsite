@@ -3,18 +3,7 @@ $icon-font-path: '../fonts/'
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
 // endbower
-$font-prelo-bold:  'prelo-bold', "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-prelo-medium:  'prelo-medium', "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-prelo-light:  'prelo-light', "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-prelo-extra-light:  'prelo-extra-light', "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-museo:  'museo-sans', "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
-
-$brand-text-gray: #505050
-$brand-gray: #404038
-$brand-yellow: #F6B536
-
-
+@import "variables"
 
 @font-face 
   font-family: 'museo-sans'
@@ -58,6 +47,9 @@ $brand-yellow: #F6B536
   top: 50%
   transform: translateY(-50%)
 
+.pull-right
+  float: right
+
 .section-template
   padding: 100px 0
   
@@ -66,8 +58,22 @@ $brand-yellow: #F6B536
   margin: 0 auto
   text-align: center
 
+.inner-content-margin
+  margin: 30px 0
+
+.inner-content-margin-bottom
+  margin-bottom: 60px
+
+a
+  font-family: $font-prelo-light
+  font-size: 11px
+  color: #505050
+  line-height: 17px
+
 p
-  font-family: $font-prelo-medium
+  font-family: $font-prelo-light
+  font-size: 17px
+  color: #505050
 
 h2
   font-family: $font-prelo-extra-light
@@ -259,11 +265,43 @@ header.navbar
     a.btn-fancy
       display: inline-block
     p
-      font-family: $font-prelo-light
-      font-size: 17px
-      color: #505050
       line-height: 24px
       max-width: 70%
+
+.text-us
+  @extend .section-template
+  background: url(../../images/text-us-background.jpg) center no-repeat
+
+.soon
+  @extend .section-template
+  background: url(../../images/laptop-background.jpg) center no-repeat
+
+
+
+
+// Footer
+footer
+  padding: 40px 0
+  img
+    opacity: .18
+  a
+    text-transform: uppercase
+  .brand
+    text-align: center
+    float: none
+  .footer-links
+    text-align: center
+    float: none
+  @media (min-width: $screen-sm)
+    a
+      margin-right: 15px
+    .brand
+      float: right
+      text-align: right
+    .footer-links
+      float: left
+      text-align: left
+      margin-top: 15px
 
 
 // Misc
@@ -278,7 +316,7 @@ header.navbar
   position: relative
   border: 1px solid #BFBFBF
   border-radius: 6px
-  padding: 10px
+  padding: 15px
   padding-left: 35px
   text-transform: uppercase
   background-color: transparent
