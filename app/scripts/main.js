@@ -1,7 +1,12 @@
 (function($) {
 	$(document).ready(function() {
 		var placeHolder;
-		$('body').scrollspy({ target: '#navbar-example' });
+		$('body').scrollspy({ target: '.menu-primary-menu-container' });
+
+		$('header nav a, header .brand a').click(function(e) {
+			e.preventDefault();
+			$(window).scrollTo($(this).attr('href'), 350);
+		});
 
 		$(window).scroll(_.throttle(function() {
 			var scroll = $(window).scrollTop();

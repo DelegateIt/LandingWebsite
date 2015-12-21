@@ -36,7 +36,7 @@
     <div class="main">
       
       <!-- Header -->
-      <header class="navbar navbar-static-top" role="banner" id="top" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+      <header class="navbar navbar-static-top" role="banner" id="top">
         <div class="container">
           <div class="brand">
             <a class="brand" href="#">
@@ -49,11 +49,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <nav class="collapse navbar-collapse nav-primary" id="menus">
+          <nav class="collapse navbar-collapse nav-primary" id="menus" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
             <div class="menu-primary-menu-container">
+              <div class="brand">
+                <a class="brand" href="#top">
+                  <img src="./images/delegateit-logo-white.svg" title="Delegateit">
+                </a>
+              </div>
               <ul id="menu-primary-menu" class="nav">
-                <li class="menu-item"><a href="">Platforms</a></li>
-                <li class="menu-item"><a href="">What we do</a></li>
+                <li class="menu-item"><a href="#banner-intro">Platforms</a></li>
+                <li class="menu-item"><a href="#what-we-do">What we do</a></li>
                 <li class="menu-item"><a href="">Use us on vacation</a></li>
                 <li class="menu-item"><a href="" class="btn-brand">Delegate Now</a></li>
               </ul>
@@ -63,7 +68,7 @@
       </header>
 
       <!-- Content -->
-      <section class="banner-intro">
+      <section class="banner-intro" id="banner-intro">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -75,7 +80,8 @@
           </div>
         </div>
       </section>
-      <section class="what-we-do section-template">
+
+      <section class="what-we-do section-template" id="what-we-do">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -135,7 +141,7 @@
         </div> <!-- .container -->
       </section>
 
-      <section class="mobile-app">
+      <section class="mobile-app" id="mobile-app">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 message-bubbles">
@@ -214,6 +220,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

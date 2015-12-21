@@ -1,7 +1,7 @@
 $icon-font-path: '../fonts/'
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
+@import bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss
 // endbower
 @import "variables"
 
@@ -105,16 +105,36 @@ header.navbar
   nav.nav-primary
     float: right
     margin-top: 22px
-  div.menu-primary-menu-container
-    ul
-      li.menu-item
-        float: left
-        a
-          font-family: $font-prelo-medium
-          font-size: 17px
-          color: #FFFFFF
-          line-height: 25px
+    top: -200px
+    div.menu-primary-menu-container
+      .brand
+        display: none
+      ul.nav
+        li.menu-item
+          float: left
+          a
+            font-family: $font-prelo-medium
+            font-size: 17px
+            color: #FFFFFF
+            line-height: 25px
           text-transform: uppercase
+    &.affix
+      @include transition(.3s ease-out)
+      background-image: url(../../images/header-background.jpg)
+      width: 100%
+      left: 0
+      top: 0
+      margin-top: 0
+      padding: 15px 0
+      .menu-primary-menu-container
+        @extend .container
+        .brand
+          display: block
+          float: left
+        ul.nav
+          float: right
+          margin-top: 17px
+
 
 // First Section
 .banner-intro
