@@ -281,9 +281,10 @@ header.navbar
 
 // Footer
 footer
-  padding: 40px 0
+  padding: 20px 0
   img
     opacity: .18
+    margin-top: 0 !important
   a
     text-transform: uppercase
   .brand
@@ -293,7 +294,7 @@ footer
     text-align: center
     float: none
   @media (min-width: $screen-sm)
-    a
+    a:not(.brand)
       margin-right: 15px
     .brand
       float: right
@@ -301,7 +302,7 @@ footer
     .footer-links
       float: left
       text-align: left
-      margin-top: 15px
+      margin-top: 8px
 
 
 // Misc
