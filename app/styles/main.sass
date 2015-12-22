@@ -51,7 +51,7 @@ $icon-font-path: '../fonts/'
   float: right
 
 .section-template
-  padding: 100px 0
+  padding: 90px 0
   
 .section-intro
   max-width: 900px
@@ -66,7 +66,6 @@ $icon-font-path: '../fonts/'
 
 a
   font-family: $font-prelo-light
-  font-size: 11px
   color: #505050
   line-height: 17px
 
@@ -94,6 +93,8 @@ h5
 
 header.navbar
   background-image: url(../../images/header-background.jpg)
+  background-size: cover
+  background-repeat: no-repeat
   padding: 30px 0
   border-bottom: 1px solid #FFF
   margin: 0
@@ -112,12 +113,42 @@ header.navbar
       ul.nav
         li.menu-item
           float: left
+          padding-left: 15px
+          padding-right: 15px
           a
             font-family: $font-prelo-medium
             font-size: 17px
             color: #FFFFFF
             line-height: 25px
-          text-transform: uppercase
+            text-transform: uppercase
+            background: none
+            &.btn-brand:hover
+              color: $brand-yellow
+              background-color: #FFF
+            &:not(.btn-brand)
+              padding-left: 0
+              padding-right: 0
+            &:not(.btn-brand):before
+              content: ""
+              position: absolute
+              width: 100%
+              height: 1px
+              bottom: 10px
+              left: 0
+              background-color: #FFF
+              visibility: hidden
+              -webkit-transform: scaleX(0)
+              transform: scaleX(0)
+              -webkit-transition: all 0.3s ease-in-out 0s
+              transition: all 0.3s ease-in-out 0s
+            &:not(.btn-brand):hover:before
+              visibility: visible
+              -webkit-transform: scaleX(1)
+              transform: scaleX(1)
+          &.active a:not(.btn-brand):before
+            visibility: visible
+            -webkit-transform: scaleX(1)
+            transform: scaleX(1)
     &.affix
       @include transition(.3s ease-out)
       background-image: url(../../images/header-background.jpg)
@@ -133,7 +164,42 @@ header.navbar
           float: left
         ul.nav
           float: right
-          margin-top: 17px
+          margin-top: 19px
+  button.navbar-toggle
+    margin: 0
+    margin-top: 20px
+    &.collapsed
+      margin-top: 14px
+    span.icon-bar
+      @include transition(all .2s ease-out)
+      background-color: #FFF
+    &:not(.collapsed)
+      margin-top: 20px
+      span.icon-bar
+        &:nth-child(2)
+          transform: rotate(45deg)
+        &:nth-child(3)
+          opacity: 0
+        &:nth-child(4)
+          transform: rotate(-45deg)
+          margin-top: -8px
+
+  @media (max-width: $screen-xs-max)
+    nav.nav-primary
+      float: none
+      width: 100%
+      margin: 0
+      padding-left: 0
+      padding-right: 0
+      div.menu-primary-menu-container ul.nav li.menu-item
+        float: none
+        text-align: center
+    div.brand
+      max-width: 70%
+      a.brand
+        width: 100%
+        img
+          max-width: 100%
 
 
 // First Section
@@ -159,10 +225,11 @@ header.navbar
 // Second Section (what we do)
 .what-we-do
   p
-    font-family: Prelo-ExtraLight
+    font-family: $font-prelo-extra-light
     font-size: 27px
     color: $brand-gray
     line-height: 27px
+    font-weight: 100
   h4
     text-align: center
   .services
@@ -279,23 +346,34 @@ header.navbar
       &.animated
         animation: slide-fade-in-right .35s 1 forwards
         animation-delay: .6s
-  .app-description
+  .text-us
     > *:not(h2)
       margin: 25px 0
-    a.btn-fancy
-      display: inline-block
+    a
+      color: $brand-blue
+      font-weight: 600
+      &.btn-fancy
+        display: inline-block
     p
       line-height: 24px
       max-width: 70%
+  @media (min-width: $screen-sm)
+    .message-bubbles
+      padding-right: 40px
 
-.text-us
+.app-description
   @extend .section-template
-  background: url(../../images/text-us-background.jpg) center no-repeat
+  background: url(../../images/text-us-background.jpg) 110% center no-repeat
 
 .soon
   @extend .section-template
   background: url(../../images/laptop-background.jpg) center no-repeat
 
+.vacation
+  @extend .section-template
+  background: url(../../images/vacation-background.jpg) 140% 90% no-repeat
+  p:last-of-type
+    margin-bottom: 70px
 
 
 
@@ -307,6 +385,7 @@ footer
     margin-top: 0 !important
   a
     text-transform: uppercase
+    font-size: 11px
   .brand
     text-align: center
     float: none
@@ -327,13 +406,19 @@ footer
 
 // Misc
 .btn-brand
+  @include transition (all .3s)
   font-family: $font-prelo-light
   color: #FFF
   border: 1px solid #FFF
   border-radius: 8px
   text-transform: uppercase
+  text-decoration: none !important
+  &:hover
+    color: $brand-yellow
+    background-color: #FFF
 
 .btn-fancy
+  @include transition (all .3s)
   position: relative
   border: 1px solid #BFBFBF
   border-radius: 6px
@@ -345,7 +430,9 @@ footer
   font-size: 14px
   color: #898989
   line-height: 22px
+  text-decoration: none !important
   &:before
+    @include transition (all .3s)
     content: '\f105'
     position: absolute
     left: 15px
@@ -354,3 +441,21 @@ footer
     color: $brand-yellow
     color: #F6B536
     font-size: 26px
+  &:hover
+    color: #FFF
+    background-color: $brand-yellow
+    padding-left: 15px
+  &:hover:before
+    @include transition (all 0s)
+    left: -30px
+    opacity: 0
+
+#return-to-top
+  @include transition(all .1s ease-out)
+  bottom: 35px
+  right: 35px
+  svg
+    width: 28px
+  &.affix-top
+    position: fixed
+    bottom: -30px
