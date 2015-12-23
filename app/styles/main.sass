@@ -52,11 +52,15 @@ $icon-font-path: '../fonts/'
 
 .section-template
   padding: 90px 0
-  
+  @media (max-width: $screen-xs-max)
+    padding: 30px 0
+
 .section-intro
   max-width: 900px
   margin: 0 auto
   text-align: center
+  @media (max-width: $screen-xs-max)
+    padding: 30px 0
 
 .inner-content-margin
   margin: 30px 0
@@ -79,6 +83,9 @@ h2
   font-size: 52px
   color: #222222
   font-weight: 100
+  @media (max-width: $screen-xs-max)
+    font-size: 42px
+    margin-bottom: 35px
 
 h4
   font-family: $font-prelo-extra-light
@@ -89,6 +96,10 @@ h4
 
 h5
   font-size: 20px
+
+@media (max-width: $screen-xs-max)
+  h2, h4, h5
+    text-align: center
 
 
 header.navbar
@@ -162,19 +173,23 @@ header.navbar
         .brand
           display: block
           float: left
+          width: 157px
+          a
+            width: 100%
+            img
+              max-width: 100%
         ul.nav
           float: right
-          margin-top: 19px
   button.navbar-toggle
     margin: 0
     margin-top: 20px
     &.collapsed
-      margin-top: 14px
+      margin-top: 20px
     span.icon-bar
       @include transition(all .2s ease-out)
       background-color: #FFF
     &:not(.collapsed)
-      margin-top: 20px
+      margin-top: 25px
       span.icon-bar
         &:nth-child(2)
           transform: rotate(45deg)
@@ -184,22 +199,33 @@ header.navbar
           transform: rotate(-45deg)
           margin-top: -8px
 
+  @media (max-width: $screen-sm-max)
+    nav.nav-primary
+      margin-top: 3px
+      div.menu-primary-menu-container ul.nav li.menu-item a
+        font-size: 12px
+    div.brand
+      max-width: 160px
+      a.brand
+        width: 100%
+        img
+          max-width: 100%
   @media (max-width: $screen-xs-max)
+    padding: 15px 0
     nav.nav-primary
       float: none
       width: 100%
       margin: 0
       padding-left: 0
       padding-right: 0
-      div.menu-primary-menu-container ul.nav li.menu-item
-        float: none
-        text-align: center
-    div.brand
-      max-width: 70%
-      a.brand
-        width: 100%
-        img
-          max-width: 100%
+      div.menu-primary-menu-container 
+        ul.nav 
+          margin-top: 15px
+          li.menu-item
+            float: none
+            text-align: center
+      &.affix
+        top: -350px !important
 
 
 // First Section
@@ -211,15 +237,20 @@ header.navbar
       font-family: $font-prelo-light
       font-size: 36px
       color: #FFFFFF
-      line-height: 34px
       margin-bottom: 35px
     .btn-brand
       font-size: 24px
       min-width: 265px
+      &:focus, &:active
+        color: #FFF !important
 
   @media (min-width: $screen-sm)
     min-height: 600px
     padding: 224px 0
+  @media (max-width: $screen-xs-max)
+    .banner-intro-content
+      p
+        font-size: 24px
 
 
 // Second Section (what we do)
@@ -308,6 +339,12 @@ header.navbar
     .services
       h2
         margin-bottom: 100px
+  @media(max-width: $screen-xs-max)
+    .services
+      h5
+        margin-bottom: 15px
+      .services-list
+        margin-bottom: 40px
 
 // Mobile App
 .mobile-app
@@ -317,7 +354,6 @@ header.navbar
     margin-top: 0
   .message-bubbles
     .message-left
-      opacity: 0 //changed through JS animation
       max-width: 350px
       background-color: #FFF
       border-radius: 10px
@@ -356,24 +392,38 @@ header.navbar
         display: inline-block
     p
       line-height: 24px
+  @media (min-width: $screen-md)
+    p
       max-width: 70%
-  @media (min-width: $screen-sm)
     .message-bubbles
       padding-right: 40px
+      .message-left
+        opacity: 0 //changed through JS animation
+  @media (max-width: $screen-xs-max)
+    .message-bubbles
+      margin-bottom: 30px
+      .message-right
+        width: 80%
 
 .app-description
   @extend .section-template
-  background: url(../../images/text-us-background.jpg) 110% center no-repeat
+  @media (min-width: $screen-sm)
+    background: url(../../images/text-us-background.jpg) center center no-repeat
 
 .soon
   @extend .section-template
-  background: url(../../images/laptop-background.jpg) center no-repeat
+  background-color: $brand-light-gray
+  @media (min-width: $screen-sm)
+    background: url(../../images/laptop-background.jpg) center no-repeat
 
 .vacation
   @extend .section-template
-  background: url(../../images/vacation-background.jpg) 140% 90% no-repeat
   p:last-of-type
     margin-bottom: 70px
+  @media (min-width: $screen-sm)
+    background: url(../../images/vacation-background.jpg) 140% 90% no-repeat
+  @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
+    background: url(../../images/vacation-background.jpg) 40% no-repeat
 
 
 
@@ -402,6 +452,13 @@ footer
       float: left
       text-align: left
       margin-top: 8px
+  @media (max-width: $screen-xs-max)
+    .footer-links a
+      margin: 0 10px
+    .brand
+      float: none
+      display: block
+      margin: 20px auto 
 
 
 // Misc
