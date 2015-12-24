@@ -6,23 +6,42 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://nathanchapman.net/flex-grid/css/u-tilities.css">
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
 
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#E1982A">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <meta name="msapplication-TileColor" content="#E1982A">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="PSK">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="DelegateIt">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -30,11 +49,11 @@
     <script src="/bower_components/underscore/underscore.js"></script>
     <!-- endbuild -->
   </head>
-    
+
   </head>
   <body>
     <div class="main">
-      
+
       <!-- Header -->
       <header class="navbar navbar-static-top" role="banner" id="top">
         <div class="container">
@@ -73,8 +92,8 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="banner-intro-content section-intro">
-                <p>Welcome to DelegateIt we provide peace of mind at home and abroad by providing you your own personal concierge.</p>
-                <a href="/app" class="btn btn-brand" target="_blank">Delegate Now</a>
+                <p>Welcome to DelegateIt. We provide peace of mind at home and abroad by providing you your own personal concierge.</p>
+                <a href="/app" class="btn btn-brand" target="_blank">Order Now</a>
               </div>
             </div>
           </div>
@@ -87,27 +106,26 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="section-intro">
-                <p>We’re pushing the envelope with traveling in the shared economy. 
+                <h4>We’re pushing the envelope with traveling in the shared economy.
                   Uber unlocked transportation. HomeAway unlocked property. We unlock time.
-                </p>
+                </h4>
               </div>
             </div>
           </div>
           <div class="services clearfix">
-            <h2>We do it all</h2>
             <div class="row">
               <div class="col-sm-3">
                 <h5>Services</h5>
-                <ul class="services-list left"> 
+                <ul class="services-list left">
                   <li class="service-item">Maid Service</li>
                   <li class="service-item">Dry Cleaning</li>
-                  <li class="service-item">Repair</li>
-                  <li class="service-item">Tutor</li>
+                  <li class="service-item">Repairs</li>
+                  <li class="service-item">Tutoring</li>
                 </ul>
               </div>
               <div class="col-sm-3">
                 <h5>Delivery</h5>
-                <ul class="services-list middle"> 
+                <ul class="services-list middle">
                   <li class="service-item">Food</li>
                   <li class="service-item">Gifts</li>
                   <li class="service-item">Daily Essentials</li>
@@ -116,7 +134,7 @@
               </div>
               <div class="col-sm-3">
                 <h5>Logistics</h5>
-                <ul class="services-list middle-right"> 
+                <ul class="services-list middle-right">
                   <li class="service-item">Trip Planning</li>
                   <li class="service-item">Advice</li>
                   <li class="service-item">How To...</li>
@@ -125,18 +143,13 @@
               </div>
               <div class="col-sm-3">
                 <h5>Reservations</h5>
-                <ul class="services-list right"> 
-                  <li class="service-item">Restaurant</li>
-                  <li class="service-item">Event</li>
-                  <li class="service-item">Vacation Rental</li>
-                  <li class="service-item">Hotel</li>
+                <ul class="services-list right">
+                  <li class="service-item">Restaurants</li>
+                  <li class="service-item">Events</li>
+                  <li class="service-item">Vacation Rentals</li>
+                  <li class="service-item">Hotels</li>
                 </ul>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <h4>We unlock time.</h4>
             </div>
           </div>
         </div> <!-- .container -->
@@ -159,7 +172,7 @@
             </div>
             <div class="col-sm-6 text-us">
               <h2>Text us</h2>
-              <p class="inner-content-margin limited-width">Seriously, text <b>DelegateIt</b> to <a href="tel:5123593557">(512) 359-3557</a>.</p>
+              <p class="inner-content-margin limited-width">Seriously, text <b>DelegateIt</b> to <a href="tel:5123593557">(512)&nbsp;359-3557</a>.</p>
               <p class="inner-content-margin-bottom limited-width">DelegateIt SMS is a simple product that will surprise customers for its ease of use and efficiency. The process is simple: text your request to <b>(512) 359-3557</b>, receive confirmation, review your receipt, and be billed entirely through text messaging.</p>
               <div class="download-buttons">
                 <!-- <a href="http://apple.com" target="_blank"><img src="./images/app-store-button.svg"></a>
@@ -203,7 +216,7 @@
           <div class="row">
             <div class="col-sm-5">
               <h2>Need us on vacations? Just say the word</h2>
-              <p class="inner-content-margin">You are in a foreign country and you find yourself woefully unprepared. You didn't take into account the weather, the culture, or the customs and you now look at your suitcase and find what you had brought is far from adequate.</p>
+              <p class="inner-content-margin">You are in a foreign country and you find yourself woefully unprepared. You didn't take into account the weather, the culture, or the customs and you now look at your suitcase and find what you brought is far from adequate.</p>
               <p class="inner-content-margin">We believe in providing peace of mind while you travel through our three platforms: text messaging, mobile and web applications. Logistics, services, reservations, and delivery. <b>We do it all</b>.</p>
               <p class="inner-content-margin">Although this service is perfect for traveling, we believe this service is needed by anyone with too much on their plate. Enjoy your vacation and let us do the heavy lifting.</p>
               <!-- <a href="http://apple.com" class="btn-fancy">Learn More</a> -->
@@ -218,7 +231,7 @@
           <polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="0.8,17.9 14.4,1.6 28.1,17.9 "/>
         </svg>
       </a>
-     
+
       <!-- Footer -->
       <footer>
         <div class="container clearfix">
@@ -249,7 +262,7 @@
     <script src="/bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -264,7 +277,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
