@@ -44,7 +44,7 @@
 			}, 500));
 		}
 
-		$('#return-to-top').click(function(e) {
+		$('.return-to-top').click(function(e) {
       e.preventDefault();
       $(window).scrollTo(0, 500);
     });
