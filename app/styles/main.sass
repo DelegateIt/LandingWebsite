@@ -5,21 +5,21 @@ $icon-font-path: '../fonts/'
 // endbower
 @import "variables"
 
-@font-face 
+@font-face
   font-family: 'museo-sans'
-  src: url('../fonts/MuseoSans-500.otf') 
+  src: url('../fonts/MuseoSans-500.otf')
 
-@font-face 
+@font-face
   font-family: $font-prelo-medium
   src: url('../fonts/Prelo-Medium.otf')
 
-@font-face 
+@font-face
   font-family: $font-prelo-light
   src: url('../fonts/Prelo-Light.otf')
-@font-face 
+@font-face
   font-family: $font-prelo-extra-light
   src: url('../fonts/Prelo-ExtraLight.otf')
-@font-face 
+@font-face
   font-family: $font-prelo-bold
   src: url('../fonts/Prelo-Bold.otf')
 
@@ -75,7 +75,7 @@ a
 
 p
   font-family: $font-prelo-light
-  font-size: 17px
+  font-size: 2rem
   color: #505050
 
 h2
@@ -218,8 +218,8 @@ header.navbar
       margin: 0
       padding-left: 0
       padding-right: 0
-      div.menu-primary-menu-container 
-        ul.nav 
+      div.menu-primary-menu-container
+        ul.nav
           margin-top: 15px
           li.menu-item
             float: none
@@ -266,7 +266,7 @@ header.navbar
   .services
     @extend .section-template
     h2
-      text-align: center 
+      text-align: center
       margin-top: 0
       margin-bottom: 24px
     h5
@@ -297,43 +297,43 @@ header.navbar
       &.left
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/maid-service-icon.svg) 
+            background-image: url(../../images/maid-service-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/dry-cleaning-icon.svg) 
+            background-image: url(../../images/dry-cleaning-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/repair-icon.svg) 
+            background-image: url(../../images/repair-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/tutor-icon.svg) 
+            background-image: url(../../images/tutor-icon.svg)
       &.middle
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/food-icon.svg) 
+            background-image: url(../../images/food-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/gifts-icon.svg) 
+            background-image: url(../../images/gifts-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/daily-essentials-icon.svg) 
+            background-image: url(../../images/daily-essentials-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/dog-food-icon.svg) 
+            background-image: url(../../images/dog-food-icon.svg)
       &.middle-right
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/trip-planning-icon.svg) 
+            background-image: url(../../images/trip-planning-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/advice-icon.svg) 
+            background-image: url(../../images/advice-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/how-to-icon.svg) 
+            background-image: url(../../images/how-to-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/translating-icon.svg) 
+            background-image: url(../../images/translating-icon.svg)
       &.right
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/restaurant-icon.svg) 
+            background-image: url(../../images/restaurant-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/event-icon.svg) 
+            background-image: url(../../images/event-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/vacation-icon.svg) 
+            background-image: url(../../images/vacation-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/hotel-icon.svg) 
+            background-image: url(../../images/hotel-icon.svg)
 
   @media(min-width: $screen-sm)
     .services
@@ -420,10 +420,15 @@ header.navbar
   @extend .section-template
   p:last-of-type
     margin-bottom: 70px
-  @media (min-width: $screen-sm)
-    background: url(../../images/vacation-background.jpg) 140% 90% no-repeat
   @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
-    background: url(../../images/vacation-background.jpg) 40% no-repeat
+    background: url(../../images/vacation-background.jpg) no-repeat
+    background-position: left 300px top -120px;
+  @media (min-width: $screen-md) and (max-width: $screen-md-max)
+    background: url(../../images/vacation-background.jpg) 100px no-repeat
+    background-position: left 200px top -120px;
+  @media (min-width: $screen-lg)
+    background: url(../../images/vacation-background.jpg) no-repeat
+    background-position: right top -100px;
 
 
 
@@ -458,7 +463,7 @@ footer
     .brand
       float: none
       display: block
-      margin: 20px auto 
+      margin: 20px auto
 
 
 // Misc
