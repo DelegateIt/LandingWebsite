@@ -42,6 +42,9 @@ $icon-font-path: '../fonts/'
 .main
   font-family: $font-prelo-medium
 
+.hidden
+  display: none !important
+
 .vertical-center
   position: relative
   top: 50%
@@ -115,8 +118,13 @@ header.navbar
   transition: all 0.4s ease-in-out 0s
   a
     color: #FFF
-  .brand
+  div.brand
+    max-width: 160px
     float: left
+    a.brand
+      width: 100%
+      img
+        max-width: 100%
   nav.nav-primary
     float: right
     margin-top: 22px
@@ -131,7 +139,7 @@ header.navbar
           padding-right: 15px
           a
             font-family: $font-prelo-medium
-            font-size: 1.2em
+            font-size: 1.1em
             color: #FFFFFF
             line-height: 25px
             text-transform: uppercase
@@ -146,7 +154,7 @@ header.navbar
               position: absolute
               width: 100%
               height: 1px
-              bottom: 10px
+              bottom: 1px
               left: 0
               background-color: #FFF
               visibility: hidden
@@ -162,26 +170,6 @@ header.navbar
             visibility: visible
             -webkit-transform: scaleX(1)
             transform: scaleX(1)
-    &.affix
-      @include transition(.3s ease-out)
-      background-image: url(../../images/header-background.jpg)
-      width: 100%
-      left: 0
-      top: 0
-      margin-top: 0
-      padding: 15px 0
-      .menu-primary-menu-container
-        @extend .container
-        .brand
-          display: block
-          float: left
-          width: 157px
-          a
-            width: 100%
-            img
-              max-width: 100%
-        ul.nav
-          float: right
   button.navbar-toggle
     margin: 0
     margin-top: 20px
@@ -200,18 +188,16 @@ header.navbar
         &:nth-child(4)
           transform: rotate(-45deg)
           margin-top: -8px
-
-  @media (max-width: $screen-sm-max)
+  @media (max-width: $screen-md)
     nav.nav-primary
       margin-top: 3px
       div.menu-primary-menu-container ul.nav li.menu-item a
-        font-size: 12px
-    div.brand
-      max-width: 160px
-      a.brand
-        width: 100%
-        img
-          max-width: 100%
+        font-size: .9em
+  @media (max-width: $screen-sm)
+    nav.nav-primary
+      margin-top: 3px
+      div.menu-primary-menu-container ul.nav li.menu-item a
+        font-size: 1em
   @media (max-width: $screen-xs-max)
     padding: 15px 0
     nav.nav-primary
@@ -231,6 +217,9 @@ header.navbar
   @media (min-width: $screen-xs-max + 1)
     position: fixed
     top: 0
+  @media (min-width: $screen-md)
+    div.brand
+      max-width: 260px
 
 
 // First Section
@@ -443,11 +432,13 @@ header.navbar
 footer
   padding: 20px 0
   img
-    opacity: .18
+    // opacity: .18
     margin-top: 0 !important
+  img path
+    fill: #ff0000
   a
     text-transform: uppercase
-    font-size: 11px
+    font-size: 1.2rem
   .brand
     text-align: center
     float: none
