@@ -101,15 +101,18 @@ h5
   h2, h4, h5
     text-align: center
 
+.shrink
+  padding: 15px 0 !important
 
 header.navbar
   background-image: url(../../images/header-background.jpg)
   background-size: cover
   background-repeat: no-repeat
-  padding: 30px 0
+  padding: 40px 0
   border-bottom: 1px solid #FFF
   margin: 0
   width: 100%
+  transition: all 0.4s ease-in-out 0s
   a
     color: #FFF
   .brand
@@ -128,7 +131,7 @@ header.navbar
           padding-right: 15px
           a
             font-family: $font-prelo-medium
-            font-size: 17px
+            font-size: 1.2em
             color: #FFFFFF
             line-height: 25px
             text-transform: uppercase
@@ -137,8 +140,7 @@ header.navbar
               color: $brand-yellow
               background-color: #FFF
             &:not(.btn-brand)
-              padding-left: 0
-              padding-right: 0
+              padding: 11px 0 0 0
             &:not(.btn-brand):before
               content: ""
               position: absolute
@@ -226,6 +228,9 @@ header.navbar
             text-align: center
       &.affix
         top: -350px !important
+  @media (min-width: $screen-xs-max + 1)
+    position: fixed
+    top: 0
 
 
 // First Section
@@ -251,6 +256,8 @@ header.navbar
     .banner-intro-content
       p
         font-size: 24px
+  @media (min-width: $screen-xs-max + 1)
+    background-position: center top 100px
 
 
 // Second Section (what we do)
@@ -346,8 +353,8 @@ header.navbar
       .services-list
         margin-bottom: 40px
 
-// Mobile App
-.mobile-app
+// SMS
+.sms
   @extend .section-template
   background-color: #F3F3F3
   h2
