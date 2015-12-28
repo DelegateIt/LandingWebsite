@@ -1,0 +1,62 @@
+$icon-font-path: '../fonts/'
+
+// bower:scss
+@import bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss
+// endbower
+@import "variables"
+@import "main"
+
+header.navbar
+  background: url(../../images/mount-diablo.jpg) top -380px left no-repeat
+
+// First Section
+.banner-intro
+  background: url(../../images/mount-diablo.jpg) bottom -100px left no-repeat
+  .btn-brand
+    &:hover
+      color: $brand-purple
+      background-color: #FFF
+
+.what-we-do
+  padding: 50px 0px 0px 0px
+
+.app-description
+  @extend .section-template
+  @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
+    background: url(../../images/black-car.png) right -120px center no-repeat
+  @media (min-width: $screen-md) and (max-width: $screen-md-max)
+    background: url(../../images/black-car.png) right 5px center no-repeat
+  @media (min-width: $screen-lg)
+    background: url(../../images/black-car.png) right 5% center no-repeat
+
+.soon
+  @extend .section-template
+  background-color: $brand-light-gray
+  @media (min-width: $screen-sm)
+    background: url(../../images/laptop-background.jpg) center no-repeat
+
+.vacation
+  @extend .section-template
+  p:last-of-type
+    margin-bottom: 70px
+  @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
+    background: url(../../images/vacation-background.jpg) no-repeat
+    background-position: left 300px top -300px;
+  @media (min-width: $screen-md) and (max-width: $screen-md-max)
+    background: url(../../images/vacation-background.jpg) 100px no-repeat
+    background-position: left 200px top -300px;
+  @media (min-width: $screen-lg)
+    background: url(../../images/vacation-background.jpg) no-repeat
+    background-position: right top -300px;
+
+.properties
+  background: url('../../images/gplaypattern.png')
+  padding-bottom: 60px
+  h2
+    span
+      color: $brand-purple
+  .property-img
+    height: 100px
+    width: 100%
+    display: inline
+    margin: 5px 0

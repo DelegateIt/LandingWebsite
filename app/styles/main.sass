@@ -105,17 +105,17 @@ h5
     text-align: center
 
 .shrink
-  padding: 15px 0 !important
+  padding: 10px 0 !important
 
 header.navbar
-  background-image: url(../../images/header-background.jpg)
+  background-image: url(../images/header-background.jpg)
   background-size: cover
   background-repeat: no-repeat
   padding: 40px 0
   border-bottom: 1px solid #FFF
   margin: 0
   width: 100%
-  transition: all 0.4s ease-in-out 0s
+  transition: all 1s ease-in-out 0s
   a
     color: #FFF
   div.brand
@@ -127,7 +127,7 @@ header.navbar
         max-width: 100%
   nav.nav-primary
     float: right
-    margin-top: 22px
+    margin-top: 17px
     top: -200px
     div.menu-primary-menu-container
       .brand
@@ -224,7 +224,7 @@ header.navbar
 
 // First Section
 .banner-intro
-  background: url(../../images/banner-intro-background.jpg) center center no-repeat
+  background: url(../images/banner-intro-background.jpg) center center no-repeat
   background-size: cover
   .banner-intro-content
     p
@@ -258,7 +258,7 @@ header.navbar
     line-height: 27px
     font-weight: 100
   h4
-    text-align: center
+    text-align: justify
   .services
     @extend .section-template
     h2
@@ -293,43 +293,43 @@ header.navbar
       &.left
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/maid-service-icon.svg)
+            background-image: url(../images/maid-service-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/dry-cleaning-icon.svg)
+            background-image: url(../images/dry-cleaning-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/repair-icon.svg)
+            background-image: url(../images/repair-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/tutor-icon.svg)
+            background-image: url(../images/tutor-icon.svg)
       &.middle
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/food-icon.svg)
+            background-image: url(../images/food-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/gifts-icon.svg)
+            background-image: url(../images/gifts-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/daily-essentials-icon.svg)
+            background-image: url(../images/daily-essentials-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/dog-food-icon.svg)
+            background-image: url(../images/dog-food-icon.svg)
       &.middle-right
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/trip-planning-icon.svg)
+            background-image: url(../images/trip-planning-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/advice-icon.svg)
+            background-image: url(../images/advice-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/how-to-icon.svg)
+            background-image: url(../images/how-to-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/translating-icon.svg)
+            background-image: url(../images/translating-icon.svg)
       &.right
         li.service-item
           &:nth-child(1):before
-            background-image: url(../../images/restaurant-icon.svg)
+            background-image: url(../images/restaurant-icon.svg)
           &:nth-child(2):before
-            background-image: url(../../images/event-icon.svg)
+            background-image: url(../images/event-icon.svg)
           &:nth-child(3):before
-            background-image: url(../../images/vacation-icon.svg)
+            background-image: url(../images/vacation-icon.svg)
           &:nth-child(4):before
-            background-image: url(../../images/hotel-icon.svg)
+            background-image: url(../images/hotel-icon.svg)
 
   @media(min-width: $screen-sm)
     .services
@@ -381,10 +381,10 @@ header.navbar
   .text-us
     > *:not(h2)
       margin: 25px 0
-    a
+    a:not(.btn-fancy)
       color: $brand-blue
       font-weight: 600
-      &.btn-fancy
+    a.btn-fancy
         display: inline-block
     p
       line-height: 24px
@@ -404,38 +404,35 @@ header.navbar
 .app-description
   @extend .section-template
   @media (min-width: $screen-sm)
-    background: url(../../images/text-us-background.jpg) center center no-repeat
+    background: url(../images/text-us-background.jpg) center center no-repeat
 
 .soon
   @extend .section-template
   background-color: $brand-light-gray
   @media (min-width: $screen-sm)
-    background: url(../../images/laptop-background.jpg) center no-repeat
+    background: url(../images/laptop-background.jpg) center no-repeat
 
 .vacation
   @extend .section-template
   p:last-of-type
     margin-bottom: 70px
   @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
-    background: url(../../images/vacation-background.jpg) no-repeat
+    background: url(../images/vacation-background.jpg) no-repeat
     background-position: left 300px top -120px;
   @media (min-width: $screen-md) and (max-width: $screen-md-max)
-    background: url(../../images/vacation-background.jpg) 100px no-repeat
+    background: url(../images/vacation-background.jpg) 100px no-repeat
     background-position: left 200px top -120px;
   @media (min-width: $screen-lg)
-    background: url(../../images/vacation-background.jpg) no-repeat
+    background: url(../images/vacation-background.jpg) no-repeat
     background-position: right top -100px;
 
 
 
 // Footer
 footer
-  padding: 20px 0
+  padding: 30px 0px 10px 0
   img
-    // opacity: .18
     margin-top: 0 !important
-  img path
-    fill: #ff0000
   a
     text-transform: uppercase
     font-size: 1.2rem
@@ -445,6 +442,13 @@ footer
   .footer-links
     text-align: center
     float: none
+  @media (max-width: $screen-xs-max)
+    .footer-links a
+      margin: 0 10px
+    .brand
+      float: none
+      display: block
+      margin: 20px auto
   @media (min-width: $screen-sm)
     a:not(.brand)
       margin-right: 15px
@@ -455,13 +459,6 @@ footer
       float: left
       text-align: left
       margin-top: 8px
-  @media (max-width: $screen-xs-max)
-    .footer-links a
-      margin: 0 10px
-    .brand
-      float: none
-      display: block
-      margin: 20px auto
 
 
 // Misc
