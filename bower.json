@@ -5,7 +5,9 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
     "underscore": "~1.8.3",
-    "jquery.scrollTo": "~2.1.2"
+    "jquery.scrollTo": "~2.1.2",
+    "lightbox2": "~2.8.2",
+    "font-awesome": "~4.5.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -14,6 +16,12 @@
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
       ]
+    },
+    "font-awesome": {
+        "main": [
+            "css/font-awesome.min.css",
+            "fonts/*"
+        ]
     }
   },
   "devDependencies": {
