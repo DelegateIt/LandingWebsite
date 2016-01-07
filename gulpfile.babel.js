@@ -67,6 +67,13 @@ gulp.task('properties', ['styles'], () => {
     .pipe(gulp.dest('dist/properties'));
 });
 
+gulp.task('payment', ['styles'], () => {
+  const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
+
+  return gulp.src('app/payment/*')
+    .pipe(gulp.dest('dist/payment'));
+});
+
 gulp.task('images', () => {
   return gulp.src([
       'app/images/**/*',
@@ -174,7 +181,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'properties', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'properties', 'payment', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
