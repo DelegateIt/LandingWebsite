@@ -29,7 +29,7 @@
 			if ($(window).width() > 767) {
 				$(window).scrollTo($(this).attr('href'), 500, {offset: -84});
 			} else {
-				$(window).scrollTo($(this).attr('href'), 500, {offset: -180});
+				$(window).scrollTo($(this).attr('href'), 500, {offset: -130});
 			}
 		});
 

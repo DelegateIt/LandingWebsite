@@ -64,6 +64,7 @@ $icon-font-path: '../fonts/'
   text-align: center
   @media (max-width: $screen-xs-max)
     padding: 30px 0
+    margin-bottom: 0
 
 body.home .section-intro
   h4
@@ -219,6 +220,8 @@ header.navbar
           li.menu-item
             float: none
             text-align: center
+            &:last-child
+              margin-top: 10px
       &.affix
         top: -350px !important
   @media (min-width: $screen-sm)
@@ -255,6 +258,10 @@ header.navbar
       padding: 0
       p
         font-size: 24px
+        &.big-text
+          font-size: 40px
+          line-height: 44px
+          margin-bottom: 30px
   @media (min-width: $screen-xs-max + 1)
     background-position: center top 100px
 
@@ -470,6 +477,7 @@ footer
       margin: 20px auto
     .footer-social-media
       margin-bottom: 20px
+      text-align: center
   @media (min-width: $screen-sm)
     .footer-content-wrapper
       display: flex
