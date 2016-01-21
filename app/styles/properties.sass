@@ -84,7 +84,7 @@ header.navbar
       top: 50%
       transform: translateY(-50%)
       width: 100%
-    .carousel
+    .carousel.home-slider
       .item
         @include animation(slider-scale 12s)
         min-height: 200px
@@ -100,10 +100,46 @@ header.navbar
         &:nth-child(4)
           background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/property-4.jpg) center top no-repeat
           background-size: cover
-    @media (min-width: $screen-sm)
-      .carousel
+  .carousel.properties-slider
+    .item
+      min-height: 200px
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+      &:nth-child(1)
+        background-image: url(http://livepuntamita.com/files/Pool%20Area%20-%20Casa%20Papelillos.jpg)           
+      &:nth-child(2)
+        background-image: url(http://vacationrentalbusiness.net/wp-content/uploads/2013/07/Vacation-Rental-Business-Photography.jpg) 
+      &:nth-child(3)
+        background-image: url(http://www.destination360.com/north-america/us/oregon/images/s/oregon-vacation-rental.jpg) 
+      &:nth-child(4)
+        background-image: url(http://static.tacdn.com/img2/vacationrentals/lander/premierGeos/003-south-carolina-vacation-rentals.jpg) 
+      &:nth-child(5)
+        background-image: url(http://visitoceanside.org/wp-content/uploads/2013/01/url5.jpeg) 
+      &:nth-child(6)
+        background-image: url(http://www.puertomorelosvillas.com/graphics/Index-Featured/puerto-morelos-villas-vacation-rental-zoom.jpg) 
+      &:nth-child(7)
+        background-image: url(https://www.realtimerental.com/rrv10/include/images/Great%20Vacation%20Property%20-%2001.jpg) 
+      &:nth-child(8)
+        background-image: url(http://www.kailua-beach-rentals.com/RoyalBeachEstate/RoyalBeachEstate_1.jpg) 
+      &:nth-child(9)
+        background-image: url(https://vacationpalmsprings.com/house-images/813/420/vacation-rental-palm-springs-warm-sands_070.jpg) 
+      &:nth-child(10)
+        background-image: url(http://www.destination360.com/europe/turkey/images/s/vacation-rentals.jpg) 
+      &:nth-child(11)
+        background-image: url(https://static.tacdn.com/img2/vacationrentals/lander/premierProperties/4223304.png) 
+      &:nth-child(12)
+        background-image: url(http://www.oceanfrontproperties.com/property/virginislands/crowder/photo/crowder3.jpg) 
+
+
+  @media (min-width: $screen-sm)
+    .banner-intro
+      .carousel.home-slider
         .item
           min-height: 700px
+    .carousel.properties-slider
+      .item
+        min-height: 500px
 
 // Image slider
 .carousel-fade
@@ -133,6 +169,26 @@ header.navbar
       @include translate3d(0, 0, 0)
 
 
+.available-soon-modal
+  .modal-header
+    background: url(../images/logo-d-yellow-rotated.svg) 220px -90px no-repeat 
+    background-size: 420px 480px
+    padding: 120px 15px
+
+.google-form-modal
+  button.close
+    opacity: 1
+    color: #FFF
+  .modal-header
+    background: none
+    padding: 0
+    iframe
+      max-width: 100%
+  @media (min-width: $screen-sm)
+    .modal-header
+      iframe
+        height: 920px
+
 .modal
   .modal-dialog
     .modal-content
@@ -140,10 +196,8 @@ header.navbar
       box-shadow: none
       .modal-header
         border: 0
-        padding: 120px 0
         button.close
           position: absolute 
           top: 10px
           right: 10px
         .modal-title
-          text-align: center

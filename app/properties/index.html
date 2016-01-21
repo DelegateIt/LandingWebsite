@@ -49,6 +49,9 @@
   <!-- build:js scripts/vendor/underscore.js -->
   <script src="/bower_components/underscore/underscore.js"></script>
   <!-- endbuild -->
+  <script type="text/javascript">
+    // window.location.href = "https://godelegateit.com/properties"
+  </script>
 </head>
 
 </head>
@@ -60,7 +63,7 @@
     <header class="navbar navbar-static-top" role="banner" id="top">
       <div class="container">
         <div class="brand">
-          <a class="brand" href="/">
+          <a class="brand return-to-top" href="#banner-intro">
             <img src="../images/delegateit-logo-white.svg" title="Delegateit">
           </a>
         </div>
@@ -77,7 +80,7 @@
               <li class="menu-item"><a href="#what-we-do">What we do</a></li>
               <li class="menu-item"><a href="#app-description">How we help</a></li>
               <li class="menu-item hidden-xs hidden-sm hidden-md"><a href="#sms">Platforms</a></li>
-              <li class="menu-item"><a href="/app" class="btn-brand" target="_blank">Get Delegateit</a></li>
+              <li class="menu-item"><a type="button" class="btn-brand" data-toggle="modal" data-target="#google-form-modal">Get Delegateit</a></li>
             </ul>
           </div>
         </nav>
@@ -87,7 +90,7 @@
     <!-- First Section -->
     <section class="banner-intro" id="banner-intro">
 
-      <div id="home-slider" class="carousel carousel-fade slide" data-ride="carousel">
+      <div id="home-slider" class="carousel carousel-fade slide home-slider" data-ride="carousel">
 
         <div class="carousel-inner" role="listbox">
           <div class="item active">
@@ -110,7 +113,7 @@
                 <p class="big-text">Your Free Rental Concierge.</p>
                 <p>Take Your Rental to the Next Level.</p>
                 <!-- Button trigger modal -->
-                <a type="button" class="btn btn-brand" data-toggle="modal" data-target="#myModal">Get Delegateit</a>
+                <a type="button" class="btn btn-brand" data-toggle="modal" data-target="#google-form-modal">Get Delegateit</a>
               </div>
             </div>
           </div>
@@ -134,79 +137,35 @@
             <h2 class="inner-content-margin">Properties that use <span>DelegateIt</span></h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://livepuntamita.com/files/Pool%20Area%20-%20Casa%20Papelillos.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://livepuntamita.com/files/Pool%20Area%20-%20Casa%20Papelillos.jpg" />
-            </a>
-          </div>
+        <div id="properties-slider" class="carousel slide properties-slider" data-ride="carousel">
 
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://vacationrentalbusiness.net/wp-content/uploads/2013/07/Vacation-Rental-Business-Photography.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://vacationrentalbusiness.net/wp-content/uploads/2013/07/Vacation-Rental-Business-Photography.jpg" />
-            </a>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
           </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://www.destination360.com/north-america/us/oregon/images/s/oregon-vacation-rental.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://www.destination360.com/north-america/us/oregon/images/s/oregon-vacation-rental.jpg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://static.tacdn.com/img2/vacationrentals/lander/premierGeos/003-south-carolina-vacation-rentals.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://static.tacdn.com/img2/vacationrentals/lander/premierGeos/003-south-carolina-vacation-rentals.jpg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://visitoceanside.org/wp-content/uploads/2013/01/url5.jpeg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://visitoceanside.org/wp-content/uploads/2013/01/url5.jpeg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://www.puertomorelosvillas.com/graphics/Index-Featured/puerto-morelos-villas-vacation-rental-zoom.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://www.puertomorelosvillas.com/graphics/Index-Featured/puerto-morelos-villas-vacation-rental-zoom.jpg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="https://www.realtimerental.com/rrv10/include/images/Great%20Vacation%20Property%20-%2001.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="https://www.realtimerental.com/rrv10/include/images/Great%20Vacation%20Property%20-%2001.jpg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://www.kailua-beach-rentals.com/RoyalBeachEstate/RoyalBeachEstate_1.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://www.kailua-beach-rentals.com/RoyalBeachEstate/RoyalBeachEstate_1.jpg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="https://vacationpalmsprings.com/house-images/813/420/vacation-rental-palm-springs-warm-sands_070.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="https://vacationpalmsprings.com/house-images/813/420/vacation-rental-palm-springs-warm-sands_070.jpg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://www.destination360.com/europe/turkey/images/s/vacation-rentals.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://www.destination360.com/europe/turkey/images/s/vacation-rentals.jpg" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="https://static.tacdn.com/img2/vacationrentals/lander/premierProperties/4223304.png" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="https://static.tacdn.com/img2/vacationrentals/lander/premierProperties/4223304.png" />
-            </a>
-          </div>
-
-          <div class="col-xs-4 col-sm-3 col-md-2">
-            <a href="http://www.oceanfrontproperties.com/property/virginislands/crowder/photo/crowder3.jpg" data-lightbox="image-1" data-title="Some Vacation Rental Name - Some Address, Some City">
-              <img class="property-img" src="http://www.oceanfrontproperties.com/property/virginislands/crowder/photo/crowder3.jpg" />
-            </a>
-          </div>
-
+          
         </div>
       </div>
       <!-- What we do -->
@@ -307,7 +266,7 @@
                 <a href="http://apple.com" target="_blank"><img src="../images/app-store-button.svg"></a>
                 <a href="http://apple.com" target="_blank"><img src="../images/google-play-button.svg"></a>
               </div> -->
-            <a href="../app" class="btn-fancy">Check out our web app</a>
+            <a type="button" class="btn-fancy" data-toggle="modal" data-target="#soon-modal">Check out our web app</a>
           </div>
         </div>
       </div>
@@ -321,7 +280,7 @@
             <h2>We make things easier for property owners</h2>
             <p class="inner-content-margin">You can leave your property information with us: WiFi passwords, property instructions, gate codes, etc. Your guests have all of the information they need, just a text away.</p>
             <p class="inner-content-margin">You can sit back and leave the work to us &mdash; free of charge.</p>
-            <a href="/app" class="btn-fancy">Get Delegateit</a>
+            <a type="button" data-toggle="modal" data-target="#soon-modal" class="btn-fancy">Get Delegateit</a>
           </div>
         </div>
       </div>
@@ -345,27 +304,33 @@
             <a href="https://twitter.com/delegateitnow" target="_blank"><i class="fa fa-twitter-square"></i></a>
           </div>
           <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Become a Delegator</a>
+            <a type="button" data-toggle="modal" data-target="#soon-modal">About Us</a>
+            <a type="button" data-toggle="modal" data-target="#soon-modal">Become a Delegator</a>
           </div>
         </div>
       </div>
     </footer>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    
+    <!-- Coming Soon Modal -->
+    <div class="modal fade available-soon-modal" id="soon-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">This feature will soon be available!</h4>
+            <h4 class="modal-title" id="myModalLabel">This feature will be available soon!</h4>
           </div>
-         <!--  <div class="modal-body">
-            ...
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Form Modal -->
+    <div class="modal fade google-form-modal" id="google-form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <iframe src="https://docs.google.com/forms/d/15rAdcRJVRTK72W4dL8eZj3Q5G7a6lyUr50sFVePVPx8/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
         </div>
       </div>
     </div>
