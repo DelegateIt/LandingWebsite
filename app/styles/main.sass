@@ -65,6 +65,10 @@ $icon-font-path: '../fonts/'
   @media (max-width: $screen-xs-max)
     padding: 30px 0
 
+body.home .section-intro
+  h4
+    text-align: center
+
 .inner-content-margin
   margin: 30px 0
 
@@ -111,7 +115,7 @@ header.navbar
   background-image: url(../images/header-background.jpg)
   background-size: cover
   background-repeat: no-repeat
-  padding: 40px 0
+  padding: 25px 0
   border-bottom: 1px solid #FFF
   margin: 0
   width: 100%
@@ -148,7 +152,7 @@ header.navbar
               color: $brand-yellow
               background-color: #FFF
             &:not(.btn-brand)
-              padding: 11px 0 0 0
+              padding: 5px 0 0 0
             &:not(.btn-brand):before
               content: ""
               position: absolute
@@ -166,6 +170,8 @@ header.navbar
               visibility: visible
               -webkit-transform: scaleX(1)
               transform: scaleX(1)
+          &:last-child
+            margin-top: -7px
           &.active a:not(.btn-brand):before
             visibility: visible
             -webkit-transform: scaleX(1)
@@ -188,12 +194,12 @@ header.navbar
         &:nth-child(4)
           transform: rotate(-45deg)
           margin-top: -8px
-  @media (max-width: $screen-md)
+  @media (max-width: $screen-sm-max)
     nav.nav-primary
-      margin-top: 3px
+      margin-top: 7px
       div.menu-primary-menu-container ul.nav li.menu-item a
         font-size: .9em
-  @media (max-width: $screen-sm)
+  @media (max-width: $screen-xs-max)
     nav.nav-primary
       margin-top: 3px
       div.menu-primary-menu-container ul.nav li.menu-item a
@@ -214,35 +220,38 @@ header.navbar
             text-align: center
       &.affix
         top: -350px !important
-  @media (min-width: $screen-xs-max + 1)
+  @media (min-width: $screen-sm)
     position: fixed
     top: 0
   @media (min-width: $screen-md)
     div.brand
-      max-width: 260px
+      max-width: 220px
 
 
 // First Section
 .banner-intro
   background: url(../images/banner-intro-background.jpg) center center no-repeat
   background-size: cover
+  min-height: 600px
+  padding: 224px 0
   .banner-intro-content
     p
       font-family: $font-prelo-light
       font-size: 36px
       color: #FFFFFF
       margin-bottom: 35px
+      &.big-text
+        font-size: 60px
+        margin-bottom: 0
     .btn-brand
       font-size: 24px
       min-width: 265px
-      &:focus, &:active
-        color: #FFF !important
 
   @media (min-width: $screen-sm)
-    min-height: 600px
-    padding: 224px 0
+    //nothing
   @media (max-width: $screen-xs-max)
     .banner-intro-content
+      padding: 0
       p
         font-size: 24px
   @media (min-width: $screen-xs-max + 1)
@@ -261,6 +270,7 @@ header.navbar
     text-align: justify
   .services
     @extend .section-template
+    padding: 60px 0 0
     h2
       text-align: center
       margin-top: 0
@@ -418,13 +428,13 @@ header.navbar
     margin-bottom: 70px
   @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
     background: url(../images/vacation-background.jpg) no-repeat
-    background-position: left 300px top -120px;
+    background-position: left 300px top -120px
   @media (min-width: $screen-md) and (max-width: $screen-md-max)
     background: url(../images/vacation-background.jpg) 100px no-repeat
-    background-position: left 200px top -120px;
+    background-position: left 200px top -120px
   @media (min-width: $screen-lg)
     background: url(../images/vacation-background.jpg) no-repeat
-    background-position: right top -100px;
+    background-position: right top -330px
 
 
 
@@ -436,12 +446,20 @@ footer
   a
     text-transform: uppercase
     font-size: 1.2rem
+  a:not(.brand)
+    margin: 0 7px
   .brand
     text-align: center
     float: none
   .footer-links
     text-align: center
     float: none
+    a:last-child
+      margin-right: 0
+  .footer-social-media
+    i
+      color: #000
+      font-size: 22px
   @media (max-width: $screen-xs-max)
     .footer-links a
       margin: 0 10px
@@ -449,16 +467,15 @@ footer
       float: none
       display: block
       margin: 20px auto
+    .footer-social-media
+      margin-bottom: 20px
   @media (min-width: $screen-sm)
-    a:not(.brand)
-      margin-right: 15px
-    .brand
-      float: right
-      text-align: right
-    .footer-links
-      float: left
-      text-align: left
-      margin-top: 8px
+    .footer-content-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .brand
+      .footer-links
 
 
 // Misc

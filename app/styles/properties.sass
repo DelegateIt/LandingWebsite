@@ -6,8 +6,21 @@ $icon-font-path: '../fonts/'
 @import "variables"
 @import "main"
 
+@keyframes slider-scale
+  0%
+    transform: scale(1)
+  100%
+    transform: scale(1.4)
+
 header.navbar
-  background: url(../../images/mount-diablo.jpg) top -380px left no-repeat
+  background: transparent
+  border: 0
+  &.shrink
+    background-image: url(../images/header-background.jpg)
+    background-size: cover
+  a.btn-brand
+    &:hover
+      color: $brand-purple
 
 // First Section
 .banner-intro
@@ -17,16 +30,13 @@ header.navbar
       color: $brand-purple
       background-color: #FFF
 
-.what-we-do
-  padding: 50px 0px 0px 0px
-
 .app-description
   @extend .section-template
   @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
     background: url(../../images/black-car.png) right -120px center no-repeat
   @media (min-width: $screen-md) and (max-width: $screen-md-max)
     background: url(../../images/black-car.png) right 5px center no-repeat
-  @media (min-width: $screen-lg)
+
     background: url(../../images/black-car.png) right 5% center no-repeat
 
 .soon
@@ -41,22 +51,99 @@ header.navbar
     margin-bottom: 70px
   @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
     background: url(../../images/vacation-background.jpg) no-repeat
-    background-position: left 300px top -300px;
+    background-position: left 300px top -300px
   @media (min-width: $screen-md) and (max-width: $screen-md-max)
     background: url(../../images/vacation-background.jpg) 100px no-repeat
-    background-position: left 200px top -300px;
+    background-position: left 200px top -300px
   @media (min-width: $screen-lg)
     background: url(../../images/vacation-background.jpg) no-repeat
-    background-position: right top -300px;
+    background-position: right top -300px
 
 .properties
   background: url('../../images/gplaypattern.png')
-  padding-bottom: 60px
   h2
     span
       color: $brand-purple
+  .section-intro
+    margin-bottom: 35px
+    text-align: left
   .property-img
     height: 100px
     width: 100%
     display: inline
     margin: 5px 0
+
+.properties-page
+  .banner-intro
+    position: relative
+    background: none
+    padding: 0
+    min-height: 0
+    .main-title
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 100%
+    .carousel
+      .item
+        @include animation(slider-scale 12s)
+        min-height: 200px
+        &:nth-child(1)
+          background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/property-3.jpg) center top no-repeat
+          background-size: cover
+        &:nth-child(2)
+          background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/property-1.jpg) center top no-repeat
+          background-size: cover
+        &:nth-child(3)
+          background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/property-2.jpg) center top no-repeat
+          background-size: cover
+        &:nth-child(4)
+          background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/property-4.jpg) center top no-repeat
+          background-size: cover
+    @media (min-width: $screen-sm)
+      .carousel
+        .item
+          min-height: 700px
+
+// Image slider
+.carousel-fade
+  height: 100%
+  width: 100%
+  top: 0
+  z-index: -5
+  .carousel-inner 
+    height: 100%
+    .item 
+      @include transition(all 1.5s ease-in-out)
+      min-height: 390px
+      height: 100%
+      &.first-load
+        opacity: 0 !important
+
+    .item, .active.left, .active.right 
+      opacity: 0
+    
+    .active, .next.left, .prev.right 
+      opacity: 1
+
+    .next, .prev, .active.left, .active.right, .active 
+      left: 0
+      right: 0
+      width: 100%
+      @include translate3d(0, 0, 0)
+
+
+.modal
+  .modal-dialog
+    .modal-content
+      border-radius: 0
+      box-shadow: none
+      .modal-header
+        border: 0
+        padding: 120px 0
+        button.close
+          position: absolute 
+          top: 10px
+          right: 10px
+        .modal-title
+          text-align: center

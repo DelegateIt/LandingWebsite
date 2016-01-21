@@ -53,14 +53,14 @@
 
 </head>
 
-<body>
+<body class="properties-page">
   <div class="main">
 
     <!-- Header -->
     <header class="navbar navbar-static-top" role="banner" id="top">
       <div class="container">
         <div class="brand">
-          <a class="brand" href="#banner-intro">
+          <a class="brand" href="/">
             <img src="../images/delegateit-logo-white.svg" title="Delegateit">
           </a>
         </div>
@@ -73,11 +73,11 @@
         <nav class="collapse navbar-collapse nav-primary" id="menus">
           <div class="menu-primary-menu-container">
             <ul id="menu-primary-menu" class="nav">
-              <li class="menu-item"><a href="#what-we-do">What we do</a></li>
               <li class="menu-item hidden-xs"><a href="#properties">Properties</a></li>
-              <li class="menu-item hidden-xs hidden-sm hidden-md"><a href="#sms">Platforms</a></li>
+              <li class="menu-item"><a href="#what-we-do">What we do</a></li>
               <li class="menu-item"><a href="#app-description">How we help</a></li>
-              <li class="menu-item"><a href="/app" class="btn-brand" target="_blank">Register Now</a></li>
+              <li class="menu-item hidden-xs hidden-sm hidden-md"><a href="#sms">Platforms</a></li>
+              <li class="menu-item"><a href="/app" class="btn-brand" target="_blank">Get Delegateit</a></li>
             </ul>
           </div>
         </nav>
@@ -86,20 +86,40 @@
 
     <!-- First Section -->
     <section class="banner-intro" id="banner-intro">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="banner-intro-content section-intro">
-              <p>The free vacation rental concierge.</p>
-              <a href="/app" class="btn btn-brand" target="_blank">Register Now</a>
+
+      <div id="home-slider" class="carousel carousel-fade slide" data-ride="carousel">
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+          </div>
+          <div class="item">
+          </div>
+          <div class="item">
+          </div>
+          <div class="item">
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="main-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="banner-intro-content section-intro">
+                <p class="big-text">Your Free Rental Concierge.</p>
+                <p>Take Your Rental to the Next Level.</p>
+                <!-- Button trigger modal -->
+                <a type="button" class="btn btn-brand" data-toggle="modal" data-target="#myModal">Get Delegateit</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- What we do -->
-    <section class="what-we-do section-template" id="what-we-do">
+    <!-- Properties -->
+    <section class="properties section-template" id="properties">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -109,53 +129,6 @@
             </div>
           </div>
         </div>
-        <div class="services clearfix">
-          <div class="row">
-            <div class="col-sm-3">
-              <h5>Services</h5>
-              <ul class="services-list left">
-                <li class="service-item">Maid Service</li>
-                <li class="service-item">Dry Cleaning</li>
-                <li class="service-item">Repairs</li>
-                <li class="service-item">Tutoring</li>
-              </ul>
-            </div>
-            <div class="col-sm-3">
-              <h5>Delivery</h5>
-              <ul class="services-list middle">
-                <li class="service-item">Food</li>
-                <li class="service-item">Gifts</li>
-                <li class="service-item">Daily Essentials</li>
-                <li class="service-item">Dog Food</li>
-              </ul>
-            </div>
-            <div class="col-sm-3">
-              <h5>Logistics</h5>
-              <ul class="services-list middle-right">
-                <li class="service-item">Trip Planning</li>
-                <li class="service-item">Advice</li>
-                <li class="service-item">How To...</li>
-                <li class="service-item">Translating</li>
-              </ul>
-            </div>
-            <div class="col-sm-3">
-              <h5>Reservations</h5>
-              <ul class="services-list right">
-                <li class="service-item">Restaurants</li>
-                <li class="service-item">Events</li>
-                <li class="service-item">Vacation Rentals</li>
-                <li class="service-item">Hotels</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- .container -->
-    </section>
-
-    <!-- Properties -->
-    <section class="properties" id="properties">
-      <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <h2 class="inner-content-margin">Properties that use <span>DelegateIt</span></h2>
@@ -236,6 +209,79 @@
 
         </div>
       </div>
+      <!-- What we do -->
+      <section class="what-we-do" id="what-we-do">
+        <div class="container">
+          <div class="services clearfix">
+            <div class="row">
+              <div class="col-sm-3">
+                <h5>Services</h5>
+                <ul class="services-list left">
+                  <li class="service-item">Maid Service</li>
+                  <li class="service-item">Dry Cleaning</li>
+                  <li class="service-item">Repairs</li>
+                  <li class="service-item">Tutoring</li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <h5>Delivery</h5>
+                <ul class="services-list middle">
+                  <li class="service-item">Food</li>
+                  <li class="service-item">Gifts</li>
+                  <li class="service-item">Daily Essentials</li>
+                  <li class="service-item">Dog Food</li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <h5>Logistics</h5>
+                <ul class="services-list middle-right">
+                  <li class="service-item">Trip Planning</li>
+                  <li class="service-item">Advice</li>
+                  <li class="service-item">How To...</li>
+                  <li class="service-item">Translating</li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <h5>Reservations</h5>
+                <ul class="services-list right">
+                  <li class="service-item">Restaurants</li>
+                  <li class="service-item">Events</li>
+                  <li class="service-item">Vacation Rentals</li>
+                  <li class="service-item">Hotels</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container -->
+      </section>
+    </section>
+
+
+    <!-- Text us -->
+    <section class="app-description" id="app-description">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <h2>Delight your guests</h2>
+            <p>Your guests will be able to have a car pick them up from the airport, groceries in the fridge when they arrive, and reservations for resturants and events. Whatever they choose, they'll have a better experience in your rental.</p>
+            <!-- <a href="http://apple.com" class="btn-fancy">Learn More</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soon -->
+    <section class="soon" id="soon">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 pull-right">
+            <h2 class="inner-content-margin">Improve your ratings and exposure</h2>
+            <p class="inner-content-margin-bottom">Properties that use our service get good feedback. Improve your ratings and provide a personalized level of service to your guests. We also promote and drive customers toward properties that use our service.</p>
+            <!-- <a href="http://apple.com" class="btn-fancy" class="inner-content-margin">Learn More</a> -->
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Mobile App -->
@@ -267,32 +313,6 @@
       </div>
     </section>
 
-    <!-- Text us -->
-    <section class="app-description" id="app-description">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <h2>Delight your guests</h2>
-            <p>Your guests will be able to have a car pick them up from the airport, groceries in the fridge when they arrive, and reservations for resturants and events. Whatever they choose, they'll have a better experience in your rental.</p>
-            <!-- <a href="http://apple.com" class="btn-fancy">Learn More</a> -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Soon -->
-    <section class="soon" id="soon">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 pull-right">
-            <h2 class="inner-content-margin">Improve your ratings and exposure</h2>
-            <p class="inner-content-margin-bottom">Properties that use our service get good feedback. Improve your ratings and provide a personalized level of service to your guests. We also promote and drive customers toward properties that use our service.</p>
-            <!-- <a href="http://apple.com" class="btn-fancy" class="inner-content-margin">Learn More</a> -->
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Vacation -->
     <section class="vacation" id="vacation">
       <div class="container">
@@ -301,7 +321,7 @@
             <h2>We make things easier for property owners</h2>
             <p class="inner-content-margin">You can leave your property information with us: WiFi passwords, property instructions, gate codes, etc. Your guests have all of the information they need, just a text away.</p>
             <p class="inner-content-margin">You can sit back and leave the work to us &mdash; free of charge.</p>
-            <a href="/app" class="btn-fancy">Register Now</a>
+            <a href="/app" class="btn-fancy">Get Delegateit</a>
           </div>
         </div>
       </div>
@@ -316,15 +336,39 @@
     <!-- Footer -->
     <footer>
       <div class="container clearfix">
-        <div class="footer-links">
-          <a href="#">About Us</a>
-          <a href="#">Become a Delegator</a>
+        <div class="footer-content-wrapper">
+          <a class="brand return-to-top" href="#banner-intro">
+            <img src="../images/delegateit-logo-gray.svg" title="DelegateIt">
+          </a>
+          <div class="footer-social-media">
+            <a href="https://www.facebook.com/DelegateItNow" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://twitter.com/delegateitnow" target="_blank"><i class="fa fa-twitter-square"></i></a>
+          </div>
+          <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Become a Delegator</a>
+          </div>
         </div>
-        <a class="brand return-to-top" href="#banner-intro">
-          <img src="../images/delegateit-logo-gray.svg" title="DelegateIt">
-        </a>
       </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">This feature will soon be available!</h4>
+          </div>
+         <!--  <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
