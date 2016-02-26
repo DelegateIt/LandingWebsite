@@ -79,7 +79,7 @@
               <li class="menu-item"><a href="#what-we-do">What we do</a></li>
               <li class="menu-item"><a href="#sms">Platforms</a></li>
               <li class="menu-item hidden-xs"><a href="#vacation">Use us on vacation</a></li>
-              <li class="menu-item"><a href="/app" class="btn-brand" target="_blank">Sign Up</a></li>
+              <li class="menu-item"><a type="button" class="btn btn-brand" data-toggle="modal" data-target="#google-form-modal">Sign Up</a></li>
             </ul>
           </div>
         </nav>
@@ -95,7 +95,7 @@
             <div class="banner-intro-content section-intro">
               <p class="big-text">Your Personal Concierge</p>
               <p>On demand assistance with tasks, delivery, and advice.</p>
-              <a class="btn btn-brand">How It Works</a>
+              <!-- <a class="btn btn-brand">How It Works</a> -->
             </div>
           </div>
         </div>
@@ -293,6 +293,19 @@
         </div>
       </div>
     </footer>
+  </div>
+
+    <!-- Google Form Modal -->
+    <div class="modal fade google-form-modal" id="google-form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <iframe src="https://docs.google.com/forms/d/15rAdcRJVRTK72W4dL8eZj3Q5G7a6lyUr50sFVePVPx8/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>

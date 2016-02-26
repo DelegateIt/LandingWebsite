@@ -627,6 +627,36 @@ footer
     left: -30px
     opacity: 0
 
+.google-form-modal
+  button.close
+    opacity: 1
+    color: #FFF
+  .modal-header
+    background: none
+    padding: 0
+    iframe
+      max-width: 100%
+  @media (min-width: $screen-sm)
+    .modal-header
+      iframe
+        height: 920px
+
+.modal
+  .modal-dialog
+    max-width: 100%
+    .modal-content
+      border-radius: 0
+      box-shadow: none
+      .modal-header
+        border: 0
+        button.close
+          position: absolute
+          top: 10px
+          right: 10px
+
+  @media (max-width: $screen-xs-max)
+    .modal-content
+
 #return-to-top
   @include transition(all .1s ease-out)
   bottom: 35px
