@@ -54,6 +54,9 @@ $icon-font-path: '../fonts/'
 .pull-right
   float: right
 
+.no-opacity
+  opacity: 0
+
 .section-template
   padding: 90px 0
   @media (max-width: $screen-xs-max)
@@ -683,7 +686,7 @@ footer
 
 
 .how-it-works-block-wrapper
-  @include transition(all .6s)
+  @include transition(top .6s)
   position: absolute
   width: 100%
   z-index: 9999
