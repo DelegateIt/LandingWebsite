@@ -40,6 +40,7 @@ $icon-font-path: '../fonts/'
     margin-left: 0
 
 .main
+  @include transition(all .6s)
   font-family: $font-prelo-medium
 
 .hidden
@@ -627,6 +628,14 @@ footer
     left: -30px
     opacity: 0
 
+.dismiss
+  @include transition(all .3s)
+  position: absolute
+  top: 15px
+  right: 15px
+  &:hover
+    color: $brand-red
+
 .google-form-modal
   button.close
     opacity: 1
@@ -671,3 +680,28 @@ footer
   &.affix-top
     position: fixed
     bottom: -30px
+
+
+.how-it-works-block-wrapper
+  @include transition(all .6s)
+  position: absolute
+  width: 100%
+  z-index: 9999
+  background-color: $brand-yellow
+  padding-top: 30px
+  padding-bottom: 30px
+  &.animated
+    top: 0
+  .hiw-item
+    text-align: center
+    img
+      width: 65%
+    &:nth-child(2)
+      img
+        margin-right: -23px
+  .dismiss
+    font-size: 24px
+  .btn-brand
+    display: table
+    margin: 0 auto
+    font-size: 26px

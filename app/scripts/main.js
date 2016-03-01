@@ -75,6 +75,29 @@
       $(window).scrollTo(0, 500);
     });
 
+    var howItWorksHeight = $('.how-it-works-block-wrapper').height() + 60;
+    $('.how-it-works-block-wrapper').css('top', -howItWorksHeight);
+
+    $('a.collapse-toggle:not(.dismiss)').click(function(e){
+      e.preventDefault();
+      $($(this).attr('href')).toggleClass('animated');
+      $($(this).attr('href')).removeAttr('style');
+      
+      if ($($(this).attr('href')).hasClass('animated')) {
+        $('.main').css('margin-top', howItWorksHeight);
+      } else {
+        $('.main').removeAttr('style');
+        $($(this).attr('href')).css('top', -howItWorksHeight);
+      }
+    });
+
+    $('.dismiss').click(function(e){
+      e.preventDefault();
+      $($(this).attr('href')).removeClass('animated');
+      $($(this).attr('href')).css('top', -howItWorksHeight);
+      $('.main').removeAttr('style');
+    });
+
     // $('input:not(.datepicker), textarea, select').focusin(function() {
     // 	placeHolder = $(this).attr('placeholder');
     // 	$(this).attr('placeholder', '');
