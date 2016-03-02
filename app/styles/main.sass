@@ -695,6 +695,9 @@ footer
   padding-bottom: 30px
   &.animated
     top: 0
+  h3
+    margin-top: 0
+    margin-bottom: 20px
   .hiw-item
     text-align: center
     img
@@ -702,6 +705,27 @@ footer
   .dismiss
     font-size: 24px
   .btn-brand
-    display: table
-    margin: 0 auto
     font-size: 26px
+  .cta
+    margin-top: 30px
+    span, a
+      font-size: 26px
+      color: #FFF
+    a.btn:hover
+      color: $brand-yellow
+    .col-sm-4
+      text-align: center
+
+    @media (min-width: $screen-sm)
+      .col-sm-4
+        float: none
+        display: inline-block
+        vertical-align: middle
+        &:nth-child(1)
+          text-align: right
+        &:nth-child(3)
+          text-align: left
+
+    @media (max-width: $screen-xs-max)
+      .col-sm-4
+        margin-bottom: 20px
