@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#E1982A">
 
   <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
 
   <!-- Tile color for Win8 -->
   <meta name="msapplication-TileColor" content="#E1982A">
@@ -27,7 +27,7 @@
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="PSK">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+  <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -40,7 +40,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/styles/main.css">
   <!-- endbuild -->
 
   <!-- build:js scripts/vendor/modernizr.js -->
@@ -78,11 +78,15 @@
       <div class="row cta">
         <div class="col-sm-4">
           <a href="#" class="btn btn-brand">Get The App</a>
-        </div><!--
-     --><div class="col-sm-4 text-center">
+        </div>
+        <!--
+     -->
+        <div class="col-sm-4 text-center">
           <span>- OR -</span>
-        </div><!--
-     --><div class="col-sm-4">
+        </div>
+        <!--
+     -->
+        <div class="col-sm-4">
           <span>Text <a href="tel:5123593557">(512) 359-3557</a></span>
         </div>
       </div>
@@ -175,14 +179,9 @@
           </div>
           <div class="col-sm-6 text-us">
             <h2>Text us</h2>
-            <p class="inner-content-margin-bottom limited-width">The process is simple: Text your request to <b>(512) 359-3557</b>, receive a confirmation, review your receipt, and be billed entirely through
-              text messaging.</p>
-                          <p class="inner-content-margin limited-width">Seriously, text <b>DelegateIt</b> to <br /><a href="tel:5123593557">(512)&nbsp;359-3557</a> to get started.</p>
-            <div class="download-buttons">
-              <!-- <a href="http://apple.com" target="_blank"><img src="./images/app-store-button.svg"></a>
-                <a href="http://apple.com" target="_blank"><img src="./images/google-play-button.svg"></a> -->
-            </div>
-            <!-- <a href="http://apple.com" class="btn-fancy">Learn More About Our App</a> -->
+            <p class="inner-content-margin-bottom limited-width">The process is simple: Text your request to <b>(512) 359-3557</b>, receive a confirmation, review your receipt, and be billed entirely through text messaging.</p>
+            <p class="inner-content-margin limited-width">Seriously, text <b>DelegateIt</b> to
+              <br /><a href="tel:5123593557">(512)&nbsp;359-3557</a> to get started.</p>
           </div>
         </div>
       </div>
@@ -195,7 +194,10 @@
           <div class="col-sm-5">
             <h2>On the go mobile app</h2>
             <p>Take DelegateIt with you on the go with our mobile application. Browse through quick orders options, save your favorites, and control your experience all through our easy to use interface.</p>
-            <!-- <a href="http://apple.com" class="btn-fancy">Learn More</a> -->
+            <div class="download-buttons">
+              <a href="http://goo.gl/Lh3JVP" target="_blank"><img src="./images/app-store-button.png"></a>
+              <!-- <a href="http://apple.com" target="_blank"><img src="./images/google-play-button.png"></a> -->
+            </div>
           </div>
         </div>
       </div>
@@ -247,24 +249,24 @@
           </div>
           <div class="footer-links">
             <a href="https://angel.co/delegateit" target="_blank">About Us</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
           </div>
         </div>
       </div>
     </footer>
   </div>
 
-    <!-- Google Form Modal -->
-    <div class="modal fade google-form-modal" id="google-form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <iframe src="https://docs.google.com/forms/d/15rAdcRJVRTK72W4dL8eZj3Q5G7a6lyUr50sFVePVPx8/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-          </div>
+  <!-- Google Form Modal -->
+  <div class="modal fade google-form-modal" id="google-form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <iframe src="https://docs.google.com/forms/d/15rAdcRJVRTK72W4dL8eZj3Q5G7a6lyUr50sFVePVPx8/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <script>
