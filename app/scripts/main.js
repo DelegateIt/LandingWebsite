@@ -63,7 +63,7 @@
         var scroll = $(window).scrollTop();
         var halfheight = $(window).height() / 2;
 
-        if (scroll > $('.message-bubbles').offset().top - halfheight) {
+        if ($('.message-bubbles').offset() && scroll > $('.message-bubbles').offset().top - halfheight) {
           $('.message-bubbles').children().addClass('animated');
         }
 
@@ -82,7 +82,7 @@
       $('.how-it-works-block-wrapper').css('top', -howItWorksHeight);
       $('.how-it-works-block-wrapper').removeClass('no-opacity');
     });
-    
+
     $('a.collapse-toggle:not(.dismiss)').click(function(e){
       e.preventDefault();
       $($(this).attr('href')).addClass('animated');
