@@ -245,7 +245,8 @@ header.navbar
   @media (min-width: $screen-sm)
     position: fixed
     top: 0
-    background: transparent
+    &:not(.always-sticky)
+      background: transparent
   @media (min-width: $screen-md)
     // div.brand
     //   max-width: 220px
@@ -546,7 +547,7 @@ header.navbar
 
 // Footer
 footer
-  padding: 30px 0px 10px 0
+  padding: 30px 0px 5px 0
   img
     margin-top: 0 !important
   a
@@ -557,12 +558,14 @@ footer
   .brand
     text-align: center
     float: none
+    padding-left: 20px
   .footer-links
     text-align: center
     float: none
     a:last-child
       margin-right: 0
   .footer-social-media
+    padding-left: 20px
     i
       color: #000
       font-size: 22px
@@ -684,6 +687,9 @@ footer
     position: fixed
     bottom: -30px
 
+.privacy
+  margin-top: 120px
+  margin-bottom: 60px
 
 .how-it-works-block-wrapper
   @include transition(top .6s)
