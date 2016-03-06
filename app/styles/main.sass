@@ -18,7 +18,7 @@ $icon-font-path: '../fonts/'
   src: url('../fonts/Prelo-Light.otf')
 @font-face
   font-family: $font-prelo-extra-light
-  src: url('../fonts/Prelo-ExtraLight.otf')
+  src: url('/fonts/Prelo-ExtraLight.otf')
 @font-face
   font-family: $font-prelo-bold
   src: url('../fonts/Prelo-Bold.otf')
@@ -117,7 +117,7 @@ h5
 .sticky
   position: fixed
   top: 0
-  background-image: url(../images/header-background.jpg)
+  background-image: url('/images/header-background.jpg')
   background-size: cover
   background-repeat: no-repeat
   width: 100%
@@ -125,7 +125,7 @@ h5
   z-index: -1
 
 header.navbar
-  background-image: url(../images/header-background.jpg)
+  background-image: url('/images/header-background.jpg')
   background-size: cover
   background-repeat: no-repeat
   padding: 20px 0
@@ -208,7 +208,7 @@ header.navbar
           margin-top: -8px
   &.sticky
     transition: 2s
-    background-image: url(../../images/header-background.jpg)
+    background-image: url('/images/header-background.jpg')
     background-size: cover
   @media (min-width: $screen-sm-min)
     nav.nav-primary
@@ -254,7 +254,7 @@ header.navbar
 
 // First Section
 .banner-intro
-  background: url('../images/sports.jpg') center center no-repeat
+  background: url('/images/sports.jpg') center center no-repeat
   background-size: cover
   min-height: 600px
   padding: 200px 0 100px 0
@@ -514,7 +514,7 @@ header.navbar
     .message-bubbles
       padding-right: 40px
       .message-left
-        opacity: 0 //changed through JS animation
+        opacity: 0
   @media (max-width: $screen-xs-max)
     .message-bubbles
       margin-bottom: 30px
@@ -524,26 +524,26 @@ header.navbar
 .app-description
   @extend .section-template
   @media (min-width: $screen-sm)
-    background: url(../images/text-us-background.jpg) center center no-repeat
+    background: url('/images/text-us-background.jpg') center center no-repeat
 
 .soon
   @extend .section-template
   background-color: $brand-light-gray
   @media (min-width: $screen-sm)
-    background: url(../images/laptop-background.jpg) center no-repeat
+    background: url('/images/laptop-background.jpg') center no-repeat
 
 .vacation
   @extend .section-template
   p:last-of-type
     margin-bottom: 70px
   @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
-    background: url(../images/vacation-background.jpg) no-repeat
+    background: url('/images/vacation-background.jpg') no-repeat
     background-position: left 300px top -120px
   @media (min-width: $screen-md) and (max-width: $screen-md-max)
-    background: url(../images/vacation-background.jpg) 100px no-repeat
+    background: url('/images/vacation-background.jpg') 100px no-repeat
     background-position: left 200px top -120px
   @media (min-width: $screen-lg)
-    background: url(../images/vacation-background.jpg) no-repeat
+    background: url('/images/vacation-background.jpg') no-repeat
     background-position: right top -330px
 
 
@@ -643,7 +643,7 @@ footer
   top: 15px
   right: 15px
   &:hover
-    color: $brand-red
+    color: $brand-light-gray
 
 .google-form-modal
   button.close
@@ -694,11 +694,21 @@ footer
   margin-top: 120px
   margin-bottom: 60px
 
+.action-panel
+  margin-top: 30px
+  padding-top: 30px
+  border-top: 1px solid $brand-light-gray
+  h3
+    padding-top: 18px
+
 .how-it-works-block-wrapper
   @include transition(top .6s)
   position: absolute
   width: 100%
   z-index: 9999
+  background: url('/images/bg.png')
+  background-size: cover
+  background-position: bottom center
   background-color: $brand-yellow
   padding-top: 30px
   padding-bottom: 30px
@@ -711,6 +721,8 @@ footer
     text-align: center
     img
       width: 65%
+  p
+    color: $brand-gray
   .dismiss
     font-size: 24px
   .btn-brand
@@ -722,8 +734,7 @@ footer
       color: #FFF
     a.btn:hover
       color: $brand-yellow
-    .col-sm-4
-      text-align: center
+
 
     @media (min-width: $screen-sm)
       .col-sm-4
