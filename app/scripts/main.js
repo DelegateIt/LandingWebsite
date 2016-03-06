@@ -96,13 +96,17 @@
       $($(item).attr('href')).css('top', -1 * howItWorksHeight);
       $('.main').removeAttr('style');
     };
-    $('a.collapse-toggle:not(.dismiss)').click(function(e) {
+    var toggleHowItWorks = function(item) {
       var howItWorksHeight = $('.how-it-works-block-wrapper').height() + 60;
-      e.preventDefault();
-      $($(this).attr('href')).addClass('animated');
-      $($(this).attr('href')).removeAttr('style');
+      $($(item).attr('href')).addClass('animated');
+      $($(item).attr('href')).removeAttr('style');
       $('.main').css('margin-top', howItWorksHeight);
       $(window).scrollTo(0, 500);
+    };
+    dismissHowItWorks();
+    $('a.collapse-toggle:not(.dismiss)').click(function(e) {
+      e.preventDefault();
+      toggleHowItWorks(this);
     });
     $('.dismiss').on('click', function(e) {
       e.preventDefault();
