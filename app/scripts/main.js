@@ -6,13 +6,6 @@
     $('#return-to-top').hide();
     $('.how-it-works-block-wrapper').hide().removeClass('no-opacity');
 
-    // Window resize reload hack for how-it-works-block-wrapper
-    $(window).resize(function() {
-      setTimeout(function() {
-        location.reload();
-      }, 300);
-    });
-
     // Carousel
     $.fn.carousel.Constructor.TRANSITION_DURATION = 1500;
     $('.carousel').carousel({
