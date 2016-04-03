@@ -10,7 +10,7 @@ $icon-font-path: '../fonts/'
   0%
     transform: scale(1)
   100%
-    transform: scale(1.4)
+    transform: scale(1.1)
 
 header.navbar
   border: 0
@@ -24,12 +24,16 @@ header.navbar
     background: transparent
 
 // First Section
-.banner-intro
+.hero
   background: url(../../images/mount-diablo.jpg) bottom -100px left no-repeat
   .btn-brand
     &:hover
       color: $brand-purple
       background-color: #FFF
+  .hero-content
+    p
+      &.big-text
+        font-size: 4em
 
 .app-description
   @extend .section-template
@@ -76,7 +80,7 @@ header.navbar
       margin-bottom: 0
 
 .properties-page
-  .banner-intro
+  .hero
     position: relative
     background: none
     padding: 0
@@ -135,7 +139,7 @@ header.navbar
 
 
   @media (min-width: $screen-sm)
-    .banner-intro
+    .hero
       .carousel.home-slider
         .item
           min-height: 700px
@@ -206,3 +210,105 @@ header.navbar
 
   @media (max-width: $screen-xs-max)
     .modal-content
+
+
+.app-download
+  @extend .section-template
+  @media (min-width: $screen-sm)
+    background: url('/images/text-us-background.jpg') center center no-repeat
+
+
+
+// What we do
+.what-we-do
+  p
+    font-family: $font-prelo-extra-light
+    font-size: 27px
+    color: $brand-gray
+    line-height: 27px
+    font-weight: 100
+  h4
+    text-align: justify
+  .services
+    @extend .section-template
+    padding: 60px 0 0
+    h2
+      text-align: center
+      margin-top: 0
+      margin-bottom: 24px
+    h5
+      text-align: center
+      margin-bottom: 35px
+    ul.services-list
+      padding-left: 0
+      list-style: none
+      li.service-item
+        padding-left: 40px
+        padding-top: 15px
+        padding-bottom: 15px
+        border-bottom: 1px solid #DEDEDE
+        font-family: $font-prelo-light
+        font-size: 17px
+        color: $brand-text-gray
+        &:last-child
+          border: none
+        &:before
+          content: ''
+          width: 22px
+          height: 23px
+          position: absolute
+          left: 17px
+          background-size: contain
+          background-position: center center
+          background-repeat: no-repeat
+      &.left
+        li.service-item
+          &:nth-child(1):before
+            background-image: url(../images/maid-service-icon.svg)
+          &:nth-child(2):before
+            background-image: url(../images/dry-cleaning-icon.svg)
+          &:nth-child(3):before
+            background-image: url(../images/repair-icon.svg)
+          &:nth-child(4):before
+            background-image: url(../images/tutor-icon.svg)
+      &.middle
+        li.service-item
+          &:nth-child(1):before
+            background-image: url(../images/food-icon.svg)
+          &:nth-child(2):before
+            background-image: url(../images/gifts-icon.svg)
+          &:nth-child(3):before
+            background-image: url(../images/daily-essentials-icon.svg)
+          &:nth-child(4):before
+            background-image: url(../images/dog-food-icon.svg)
+      &.middle-right
+        li.service-item
+          &:nth-child(1):before
+            background-image: url(../images/trip-planning-icon.svg)
+          &:nth-child(2):before
+            background-image: url(../images/advice-icon.svg)
+          &:nth-child(3):before
+            background-image: url(../images/how-to-icon.svg)
+          &:nth-child(4):before
+            background-image: url(../images/translating-icon.svg)
+      &.right
+        li.service-item
+          &:nth-child(1):before
+            background-image: url(../images/restaurant-icon.svg)
+          &:nth-child(2):before
+            background-image: url(../images/event-icon.svg)
+          &:nth-child(3):before
+            background-image: url(../images/vacation-icon.svg)
+          &:nth-child(4):before
+            background-image: url(../images/hotel-icon.svg)
+
+  @media(min-width: $screen-sm)
+    .services
+      h2
+        margin-bottom: 100px
+  @media(max-width: $screen-xs-max)
+    .services
+      h5
+        margin-bottom: 15px
+      .services-list
+        margin-bottom: 40px
