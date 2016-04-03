@@ -13,6 +13,7 @@
   <!-- bower:css -->
   <link href="/bower_components/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
   <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/bower_components/intl-tel-input/build/css/intlTelInput.css" rel="stylesheet">
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -27,16 +28,16 @@
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="PSK">
+  <meta name="application-name" content="DelegateIt">
   <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#E1982A">
   <meta name="apple-mobile-web-app-title" content="DelegateIt">
 
   <!-- Tile icon for Win8 (144x144) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -53,7 +54,7 @@
 </head>
 
 <body class="home">
-  <div class="how-it-works-block-wrapper collapsable no-opacity" id="how-it-works">
+  <!-- <div class="how-it-works-block-wrapper collapsable no-opacity" id="how-it-works">
     <a href="#how-it-works" class="dismiss"><i class="fa fa-times"></i></a>
     <div class="container">
       <div class="row">
@@ -87,15 +88,15 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="main">
 
     <!-- Header -->
     <header class="navbar navbar-static-top" role="banner" id="top">
       <div class="container">
         <div class="brand">
-          <a class="brand" href="#banner-intro">
-            <img src="./images/delegateit-logo-white.svg" title="Delegateit">
+          <a class="brand" href="/">
+            <img src="/images/delegateit-logo-white.svg" title="Delegateit">
           </a>
         </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menus">
@@ -108,8 +109,8 @@
           <div class="menu-primary-menu-container">
             <ul id="menu-primary-menu" class="nav">
               <!-- <li class="menu-item"><a href="#what-we-do">What we do</a></li> -->
-              <li class="menu-item"><a href="#sms">Platforms</a></li>
-              <li class="menu-item hidden-xs"><a href="#vacation">Vacation Rentals</a></li>
+              <!-- <li class="menu-item"><a href="#sms">Platforms</a></li> -->
+              <li class="menu-item hidden-xs"><a href="/properties/index.html">Vacation Rentals</a></li>
               <li class="menu-item"><a type="button" class="btn btn-brand" href="http://goo.gl/Lh3JVP">Get the App</a></li>
             </ul>
           </div>
@@ -118,151 +119,154 @@
       <div class="sticky no-opacity"></div>
     </header>
 
-    <!-- First Section -->
-    <section class="banner-intro" id="banner-intro">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="banner-intro-content section-intro">
-              <p class="big-text">Your Personal Concierge</p>
-              <p>On demand assistance with tasks, delivery, and advice.</p>
-              <a href="#how-it-works" class="btn btn-brand collapse-toggle">How it Works</a>
-              <!-- <a class="btn btn-brand">How It Works</a> -->
-            </div>
-          </div>
-        </div>
-        <div class="row our-services">
-          <div class="col-md-2"></div>
-          <div class="col-xs-6 col-md-2">
-            <i class="fa fa-cab fa-3x"></i>
-            <span>Transportation</span>
-          </div>
-          <div class="col-xs-6 col-md-2">
-            <i class="fa fa-shopping-cart fa-3x"></i>
-            <span>Food Delivery</span>
-          </div>
-          <div class="col-xs-6 col-md-2">
-            <i class="fa fa-question fa-3x"></i>
-            <span>Travel Advice</span>
-          </div>
-          <div class="col-xs-6 col-md-2">
-            <i class="fa fa-lightbulb-o fa-3x"></i>
-            <span>Things To Do</span>
-          </div>
-        </div>
+    <!-- Hero banner -->
+    <section class="hero" id="hero">
+      <div class="main-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="hero-content section-intro">
+                <p class="big-text">Your Travel Assistant</p>
+                <p>The service that gets you everything from groceries to concert tickets.</p>
 
-        <div class="click-scroll-down">
-          <a href="#sms">Scroll to learn more</a>
-          <i class="fa fa-chevron-down bounce"></i>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mobile App -->
-    <section class="sms" id="sms">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 message-bubbles">
-            <div class="message-left">
-              <p>I want a lamb and chicken plate with rice from Halal Bros</p>
-            </div>
-            <div class="message-right">
-              <p>Hey! I can get it delivered to your place in 35 minutes for $15, how does that sound?</p>
-            </div>
-            <div class="message-left small">
-              <p>Perfect! :)</p>
-            </div>
-          </div>
-          <div class="col-sm-6 text-us">
-            <h2>Text us</h2>
-            <p class="inner-content-margin-bottom limited-width">The process is simple: Text your request to <b>(512) 359-3557</b>, receive a confirmation, review your receipt, and be billed entirely through text messaging.</p>
-            <p class="inner-content-margin limited-width">Seriously, text <b>DelegateIt</b> to
-              <br /><a href="tel:5123593557">(512)&nbsp;359-3557</a> to get started.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Text us -->
-    <section class="app-description">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <h2>On the go mobile app</h2>
-            <p>Take DelegateIt with you on the go with our mobile application. Browse through quick orders options, save your favorites, and control your experience all through our easy to use interface.</p>
-            <div class="download-buttons">
-              <a href="http://goo.gl/Lh3JVP" target="_blank"><img src="/images/app-store-button.png"></a>
-              <!-- <a href="http://apple.com" target="_blank"><img src="./images/google-play-button.png"></a> -->
+                <div class="phone-wrapper">
+                  <div class="phone-group">
+                    <input class="phone" type="tel">
+                    <a class="phone-action hidden">Get Started!</a>
+                  </div>
+                  <p><small class="phone-info">Enter your number to get started</small></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Soon -->
-    <section class="soon">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 pull-right">
-            <h2 class="inner-content-margin">Soon: order from our website</h2>
-            <p class="inner-content-margin-bottom">We are currently in the process of improving our website to handle your orders.</p>
-            <!-- <a href="http://apple.com" class="btn-fancy" class="inner-content-margin">Learn More</a> -->
-          </div>
-        </div>
+      <div class="click-scroll-down">
+        <!-- <a href="#sms">Scroll to learn more</a> -->
+        <a href="#sms">SCROLL</a>
+        <i class="fa fa-chevron-down bounce"></i>
       </div>
-    </section>
-
-    <!-- Vacation -->
-    <section class="vacation" id="vacation">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <h2>Want help with your rental property?</h2>
-            <p class="inner-content-margin">Hosting can be challenging. We know that. We're here to help. We believe in providing peace of mind for you and your guests. We're only a text message away. Logistics, services, reservations, and delivery. <b>We do it all</b>.</p>
-            <p class="inner-content-margin">Although this service is perfect for travelers, we believe this service is needed by anyone with too much on their plate. Enjoy your day and <b>let us do the heavy lifting</b>.</p>
-            <a href="/properties/index.html" class="btn-fancy">DelegateIt for Property Owners</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <a title="return to top" href="#banner-intro" id="return-to-top" class="return-to-top" data-spy="affix" data-offset-top="140">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28.8 18.6" enable-background="new 0 0 28.8 18.6" xml:space="preserve">
-        <polyline fill="none" stroke="#F3F3F3" stroke-width="2" stroke-miterlimit="10" points="0.8,17.9 14.4,1.6 28.1,17.9 " />
-      </svg>
-    </a>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container clearfix">
-        <div class="footer-content-wrapper">
-          <a class="brand return-to-top" href="#banner-intro">
-            <img src="../images/delegateit-logo-gray.svg" title="DelegateIt">
-          </a>
-          <div class="footer-social-media">
-            <a href="https://www.facebook.com/DelegateItNow" target="_blank"><i class="fa fa-facebook-square"></i></a>
-            <a href="https://twitter.com/godelegateit" target="_blank"><i class="fa fa-twitter-square"></i></a>
-          </div>
-          <div class="footer-links">
-            <a href="https://angel.co/delegateit" target="_blank">About Us</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
+  </section>
 
-  <!-- Google Form Modal -->
-  <div class="modal fade google-form-modal" id="google-form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <iframe src="https://docs.google.com/forms/d/15rAdcRJVRTK72W4dL8eZj3Q5G7a6lyUr50sFVePVPx8/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+  <!-- What we do -->
+  <section class="what-we-do bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>What We Do</h2>
+          <p  class="justify">We are your personal assistant while you are traveling or on vacation. You can text us with any request you have and we will do our best to fulfill it for you. Most people use DelegateIt for food &amp; grocery delivery, recommendations &amp; reservations, on-demand laundry &amp; dry cleaning, and finding things to do.</p>
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="center fa fa-3x fa-shopping-basket"></i>
+            </div>
+            <div class="col-xs-4">
+              <i class="center fa fa-3x fa-cutlery"></i>
+            </div>
+            <div class="col-xs-4">
+              <i class="center fa fa-3x fa-ticket"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- SMS / How it works -->
+  <section class="sms bg-white" id="sms">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-push-6 col-lg-5 col-lg-push-7 text-us">
+          <h2>How It Works</h2>
+          <p class="inner-content-margin-bottom limited-width">
+            1. Send us a text with your request
+          </p>
+          <p class="inner-content-margin-bottom limited-width">
+            2. Our team will ask you for any necessary information
+          </p>
+          <p class="inner-content-margin-bottom limited-width">
+            3. You will receive a secure payment link
+          </p>
+          <p class="inner-content-margin-bottom limited-width">
+            4. We'll take care of the rest!
+          </p>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6 col-lg-7 col-lg-pull-5 message-bubbles">
+          <div class="message-left">
+            <p>I want a lamb and chicken plate with rice from Halal Bros</p>
+          </div>
+          <div class="message-right">
+            <p>Hey! I can get it delivered to your place in 35 minutes for $15, how does that sound?</p>
+          </div>
+          <div class="message-left small">
+            <p>Perfect! :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Download -->
+  <section class="app-download bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-6">
+          <h2>Download our iPhone app</h2>
+          <p class="justify">Take DelegateIt with you on the go with our mobile application. Browse through quick orders options, save your favorites, and control your experience all through our easy to use interface.</p>
+          <div class="download-buttons">
+            <a href="http://goo.gl/Lh3JVP" target="_blank"><img src="/images/app-store-button.png"></a>
+            <!-- <a href="http://apple.com" target="_blank"><img src="./images/google-play-button.png"></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Phone Input -->
+  <section class="bottom-action bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="phone-wrapper">
+            <h2>Get DelegateIt</h2>
+            <div class="phone-group">
+              <input class="phone" type="tel">
+              <a class="phone-action hidden">Get Started!</a>
+            </div>
+            <p><small class="phone-info">Enter your number to get started</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a title="return to top" href="#hero" id="return-to-top" class="return-to-top" data-spy="affix" data-offset-top="140">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28.8 18.6" enable-background="new 0 0 28.8 18.6" xml:space="preserve">
+      <polyline fill="none" stroke="#F3F3F3" stroke-width="2" stroke-miterlimit="10" points="0.8,17.9 14.4,1.6 28.1,17.9 " />
+    </svg>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container clearfix">
+      <div class="footer-content-wrapper">
+        <a class="brand return-to-top" href="#hero">
+          <img src="../images/delegateit-logo-gray.svg" title="DelegateIt">
+        </a>
+        <div class="footer-social-media">
+          <a href="https://www.facebook.com/DelegateItNow" target="_blank"><i class="fa fa-facebook-square"></i></a>
+          <a href="https://twitter.com/godelegateit" target="_blank"><i class="fa fa-twitter-square"></i></a>
+        </div>
+        <div class="footer-links">
+          <a href="https://angel.co/delegateit" target="_blank">About Us</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
   </div>
 
   <script>
@@ -302,6 +306,8 @@
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+  <script src="/bower_components/intl-tel-input/build/js/utils.js"></script>
+  <script src="/bower_components/intl-tel-input/build/js/intlTelInput.js"></script>
   <!-- endbuild -->
 
   <!-- build:js scripts/main.js -->

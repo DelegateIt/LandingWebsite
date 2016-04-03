@@ -39,7 +39,7 @@
     });
 
     // Smooth Scroll
-    $('header nav a:not(.btn-brand), body.home header .brand a, .click-scroll-down a').on('click', function(e) {
+    $('.click-scroll-down a').on('click', function(e) {
       e.preventDefault();
       if ($(window).width() > 767) {
         $(window).scrollTo($(this).attr('href'), 500, {
@@ -72,38 +72,68 @@
     }
 
 
+    $('.hero').css('height', window.innerHeight + 'px');
+
     // Click events
     $('.click-scroll-down').on('click', function(e) {
       e.preventDefault();
       $(this).hide();
     });
+
     $('.return-to-top').on('click', function(e) {
       e.preventDefault();
       $(window).scrollTo(0, 500);
     });
 
-    // How it works
-    var dismissHowItWorks = function(item) {
-      var howItWorksHeight = $('.how-it-works-block-wrapper').height() + 60;
-      $($(item).attr('href')).removeClass('animated');
-      $($(item).attr('href')).css('top', -1 * howItWorksHeight);
-      $('.main').removeAttr('style');
-    };
-    var toggleHowItWorks = function(item) {
-      var howItWorksHeight = $('.how-it-works-block-wrapper').height() + 60;
-      $($(item).attr('href')).addClass('animated');
-      $($(item).attr('href')).removeAttr('style');
-      $('.main').css('margin-top', howItWorksHeight);
-      $(window).scrollTo(0, 500);
-    };
-    dismissHowItWorks();
-    $('a.collapse-toggle:not(.dismiss)').click(function(e) {
-      e.preventDefault();
-      toggleHowItWorks(this);
+    // Phone input
+    var telInput = $(".phone");
+    var telAction = $(".phone-action");
+    telAction.on("click", function() {
+      submitPhone($(this));
     });
-    $('.dismiss').on('click', function(e) {
-      e.preventDefault();
-      dismissHowItWorks(this);
+    var submitPhone = function(self) {
+      var parent = self.parent();
+      $.post('https://api.godelegateit.com/sms/sendgreeting/' +
+          encodeURIComponent(parent.find(".phone").intlTelInput("getNumber")))
+        .always(function() {
+          parent.fadeOut(500);
+          var infoText = self.parents(".phone-wrapper").find(".phone-info");
+          infoText.fadeOut(500, function() {
+            infoText.text("Thank you for choosing DelegateIt as your travel assistant!").fadeIn(500);
+          });
+        });
+    };
+    // initialise plugin
+    telInput.intlTelInput({
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.8/js/utils.js"
+    });
+    var reset = function(input, action) {
+      input.removeClass("error");
+      input.removeClass("valid");
+      input.removeClass("invalid");
+      action.addClass("hidden");
+    };
+    var validate = function(input, action) {
+      if ($.trim(input.val())) {
+        if (input.intlTelInput("isValidNumber")) {
+          input.addClass("valid");
+          action.removeClass("hidden");
+        } else {
+          input.addClass("invalid");
+        }
+      }
+    };
+    // on blur: validate
+    telInput.blur(function() {
+      var action = $(this).parent().next(".phone-action");
+      reset($(this), action);
+      validate($(this), action);
+    });
+    // on keyup / change flag: reset
+    telInput.on("keyup change", function(e) {
+      var action = $(this).parent().next(".phone-action");
+      reset($(this), action);
+      validate($(this), action);
     });
 
   });

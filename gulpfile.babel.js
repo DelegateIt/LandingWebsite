@@ -93,6 +93,22 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/properties/images'));
 });
 
+gulp.task('flag-icons', () => {
+  return gulp.src('bower_components/intl-tel-input/build/img/*')
+      .pipe($.if($.if.isFile, $.cache($.imagemin({
+        progressive: true,
+        interlaced: true,
+        // don't remove IDs from SVGs, they are often used
+        // as hooks for embedding and styling
+        svgoPlugins: [{cleanupIDs: false}]
+    }))
+    .on('error', function (err) {
+      console.log(err);
+      this.end();
+    })))
+    .pipe(gulp.dest('dist/img'));
+});
+
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')({
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
@@ -181,7 +197,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'properties', 'payment', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'properties', 'payment', 'images', 'flag-icons', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

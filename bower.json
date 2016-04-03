@@ -7,7 +7,8 @@
     "underscore": "~1.8.3",
     "jquery.scrollTo": "~2.1.2",
     "lightbox2": "~2.8.2",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "intl-tel-input": "^8.4.8"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -18,10 +19,10 @@
       ]
     },
     "font-awesome": {
-        "main": [
-            "css/font-awesome.min.css",
-            "fonts/*"
-        ]
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/*"
+      ]
     }
   },
   "devDependencies": {
