@@ -54,43 +54,7 @@
 </head>
 
 <body class="home">
-  <!-- <div class="how-it-works-block-wrapper collapsable no-opacity" id="how-it-works">
-    <a href="#how-it-works" class="dismiss"><i class="fa fa-times"></i></a>
-    <div class="container">
-      <div class="row">
-        <div class="hiw-item col-sm-4">
-          <img src="images/chat.svg">
-          <h3>Step 1</h3>
-          <p>Send us your request</p>
-        </div>
-        <div class="hiw-item col-sm-4">
-          <img src="images/dollar-coin.svg">
-          <h3>Step 2</h3>
-          <p>Get an estimate and pay</p>
-        </div>
-        <div class="hiw-item col-sm-4">
-          <img src="images/check.svg">
-          <h3>Step 3</h3>
-          <p>We take care of the rest</p>
-        </div>
-      </div>
-    </div>
-    <div class="container action-panel">
-      <div class="row">
-        <div class="hiw-item col-sm-4">
-          <a href="http://goo.gl/Lh3JVP" class="btn btn-brand">Get The App</a>
-        </div>
-        <div class="hiw-item col-sm-4">
-          <h3>- OR -</h3>
-        </div>
-        <div class="hiw-item col-sm-4">
-          <a href="sms:5123593557?body=I'd like to place an order" class="btn btn-brand">Text (512) 359-3557</a>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div class="main">
-
     <!-- Header -->
     <header class="navbar navbar-static-top" role="banner" id="top">
       <div class="container">
@@ -108,8 +72,6 @@
         <nav class="collapse navbar-collapse nav-primary" id="menus">
           <div class="menu-primary-menu-container">
             <ul id="menu-primary-menu" class="nav">
-              <!-- <li class="menu-item"><a href="#what-we-do">What we do</a></li> -->
-              <!-- <li class="menu-item"><a href="#sms">Platforms</a></li> -->
               <li class="menu-item hidden-xs"><a href="/properties/index.html">Vacation Rentals</a></li>
               <li class="menu-item"><a type="button" class="btn btn-brand" href="http://goo.gl/Lh3JVP">Get the App</a></li>
             </ul>
@@ -147,8 +109,8 @@
         <a href="#sms">SCROLL</a>
         <i class="fa fa-chevron-down bounce"></i>
       </div>
+    </section>
   </div>
-  </section>
 
   <!-- What we do -->
   <section class="what-we-do bg-gray">
@@ -156,7 +118,8 @@
       <div class="row">
         <div class="col-sm-6">
           <h2>What We Do</h2>
-          <p  class="justify">We are your personal assistant while you are traveling or on vacation. You can text us with any request you have and we will do our best to fulfill it for you. Most people use DelegateIt for food &amp; grocery delivery, recommendations &amp; reservations, on-demand laundry &amp; dry cleaning, and finding things to do.</p>
+          <p class="justify">We are your personal assistant while you are traveling or on vacation. You can text us with any request you have and we will do our best to fulfill it for you. Most people use DelegateIt for food &amp; grocery delivery, recommendations &amp;
+            reservations, on-demand laundry &amp; dry cleaning, and finding things to do.</p>
         </div>
         <div class="col-sm-6">
           <div class="row">
@@ -253,7 +216,7 @@
   <footer>
     <div class="container clearfix">
       <div class="footer-content-wrapper">
-        <a class="brand return-to-top" href="#hero">
+        <a class="brand return-to-top" href="#banner-intro">
           <img src="../images/delegateit-logo-gray.svg" title="DelegateIt">
         </a>
         <div class="footer-social-media">
@@ -267,6 +230,29 @@
       </div>
     </div>
   </footer>
+
+  <!-- Peition Modal -->
+  <div class="modal fade google-form-modal" id="petition-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <iframe src="https://docs.google.com/forms/d/1CgJnXhF3fhoWdSHGSHOc-6wRwGqkFENjse6sWg9YkiI/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Form Modal -->
+  <div class="modal fade google-form-modal" id="google-form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <iframe src="https://docs.google.com/forms/d/15rAdcRJVRTK72W4dL8eZj3Q5G7a6lyUr50sFVePVPx8/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -308,6 +294,13 @@
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
   <!-- endbuild -->
+
+  <!-- Script that opens the petition-modal when 'petition' is in the query url parameter -->
+  <script>
+    if (window.location.search.indexOf("?petition") != -1 || window.location.search.indexOf("&petition") != -1) {
+      $("#petition-modal").modal("show");
+    }
+  </script>
 
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
