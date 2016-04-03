@@ -1,4 +1,4 @@
-$icon-font-path: '../fonts/'
+$icon-font-path: "../fonts/"
 
 // bower:scss
 @import bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss
@@ -6,22 +6,20 @@ $icon-font-path: '../fonts/'
 @import "variables"
 
 @font-face
-  font-family: 'museo-sans'
-  src: url('../fonts/MuseoSans-500.otf')
-
+  font-family: "museo-sans"
+  src: url("../fonts/MuseoSans-500.otf")
 @font-face
   font-family: $font-prelo-medium
-  src: url('../fonts/Prelo-Medium.otf')
-
+  src: url("../fonts/Prelo-Medium.otf")
 @font-face
   font-family: $font-prelo-light
-  src: url('../fonts/Prelo-Light.otf')
+  src: url("../fonts/Prelo-Light.otf")
 @font-face
   font-family: $font-prelo-extra-light
-  src: url('/fonts/Prelo-ExtraLight.otf')
+  src: url("/fonts/Prelo-ExtraLight.otf")
 @font-face
   font-family: $font-prelo-bold
-  src: url('../fonts/Prelo-Bold.otf')
+  src: url("../fonts/Prelo-Bold.otf")
 
 @keyframes slide-fade-in-right
   0%
@@ -46,6 +44,9 @@ $icon-font-path: '../fonts/'
 .hidden
   display: none !important
 
+.no-opacity
+  opacity: 0
+
 .vertical-center
   position: relative
   top: 50%
@@ -54,13 +55,22 @@ $icon-font-path: '../fonts/'
 .pull-right
   float: right
 
-.no-opacity
-  opacity: 0
+.fa.center
+  text-align: center
+  width: 100%
+
+.fa.fa-3x.fa-ticket
+  font-size: 3.4em
+  margin-top: -3px
+
 
 .section-template
   padding: 90px 0
+  p
+    text-align: justify
+    margin-bottom: 20px
   @media (max-width: $screen-xs-max)
-    padding: 30px 0
+    padding: 30px 20px
 
 .section-intro
   max-width: 900px
@@ -69,6 +79,12 @@ $icon-font-path: '../fonts/'
   @media (max-width: $screen-xs-max)
     padding: 30px 0
     margin-bottom: 0
+
+.bg-white
+  background-color: #fff
+
+.bg-gray
+  background-color: $brand-light-gray
 
 body.home .section-intro
   h4
@@ -117,7 +133,7 @@ h5
 .sticky
   position: fixed
   top: 0
-  background-image: url('/images/header-background.jpg')
+  background-image: url("/images/header-background.jpg")
   background-size: cover
   background-repeat: no-repeat
   width: 100%
@@ -125,7 +141,7 @@ h5
   z-index: -1
 
 header.navbar
-  background-image: url('/images/header-background.jpg')
+  background-image: url("/images/header-background.jpg")
   background-size: cover
   background-repeat: no-repeat
   padding: 20px 0
@@ -208,7 +224,7 @@ header.navbar
           margin-top: -8px
   &.sticky
     transition: 2s
-    background-image: url('/images/header-background.jpg')
+    background-image: url("/images/header-background.jpg")
     background-size: cover
   @media (min-width: $screen-sm-min)
     nav.nav-primary
@@ -247,29 +263,91 @@ header.navbar
     top: 0
     &:not(.always-sticky)
       background: transparent
-  @media (min-width: $screen-md)
-    // div.brand
-    //   max-width: 220px
 
+// Phone Input
+.phone-number
+  width: 320px
+  border: 1px solid $brand-light-gray
+  border-radius: 5px
+  overflow: auto
+  outline: 1px
+  padding: 8px 5px 8px 68px
+  background: url("/images/phone2.png") no-repeat #fff
+  background-size: contain
+  &.bottom-input
+    border-width: 1px !important
+  &.invalid
+    border-color: $brand-danger
+  &.valid
+    border-color: $brand-success
 
-// First Section
-.banner-intro
-  background: url('/images/sports.jpg') center center no-repeat
-  background-size: cover
-  min-height: 600px
-  padding: 200px 0 100px 0
-  margin-top: -100px
+.phone-wrapper
   position: relative
-  .banner-intro-content
-    padding-top: 10em
+
+.phone-group, .phone-wrapper h2, .phone-wrapper p
+  width: 320px
+  position: relative
+  margin: 10px auto 10px auto
+  text-align: center
+
+.hero .phone
+  border-color: $brand-blue
+
+.phone
+  margin: auto
+  width: 320px
+  height: 60px
+  border: 2px solid $brand-light-gray
+  border-radius: 5px
+  font-size: 18px
+  overflow: auto
+  outline: 1px
+  padding: 10px 5px 10px 75px
+  &.bottom-input
+    border-width: 1px !important
+  &.invalid
+    border-color: $brand-danger
+  &.valid
+    border-color: $brand-success
+
+.selected-flag
+  &:focus
+    outline: none
+
+.phone-action
+  position: absolute
+  right: 12px
+  top: 11px
+  background-color: $brand-success
+  border-radius: 5px
+  padding: 10px 10px
+  color: $brand-light-gray
+  &:hover
+    text-decoration: none
+    cursor: pointer
+    color: #fff
+
+
+
+// Hero image
+.hero
+  .main-title
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+  background: url("/images/sports.jpg") center center no-repeat
+  // background: url("/images/woman.jpg") left center no-repeat
+  background-size: cover
+  .hero-content
     p
       font-family: $font-prelo-light
-      font-size: 24px
+      font-size: 22px
       color: #FFFFFF
-      margin-bottom: 35px
+      margin-bottom: 50px
       &.big-text
-        font-size: 60px
-        margin-bottom: 0
+        font-size: 80px
+        margin-bottom: 0px
     .btn-brand
       font-size: 24px
       min-width: 265px
@@ -280,7 +358,7 @@ header.navbar
   @media (min-width: $screen-sm)
     //nothing
   @media (max-width: $screen-xs-max)
-    .banner-intro-content
+    .hero-content
       padding: 0
       p
         font-size: 24px
@@ -289,36 +367,9 @@ header.navbar
           line-height: 44px
           margin-bottom: 30px
   @media (min-width: $screen-xs-max + 1)
-    background-position: center top 100px
+    background-position: center top
   @media (min-width: $screen-lg-min)
     min-height: 800px
-
-.our-services
-  margin-top: 100px
-  // position: absolute
-  // bottom: 0
-  // margin-left: auto
-  // margin-right: auto
-  // left: 0
-  // right: 0
-  overflow: hidden
-  color: $brand-light-gray
-  div
-    text-align: center
-    margin: 15px 0px
-  i
-    vertical-align: middle
-  span
-    font-size: 1em
-    padding: 10px
-  @media (max-width: $screen-md-max)
-    span
-      display: block
-  @media (min-width: $screen-lg-min)
-    div:first-child
-      margin-right: 20px
-    div:last-child
-      margin-left: -15px
 
 .click-scroll-down
   color: $brand-light-gray
@@ -341,137 +392,19 @@ header.navbar
     cursor: pointer
     text-decoration: none
 
-.old-services
-  background: rgba(0,0,0,0.7)
-  position: absolute
-  bottom: 0
-  margin-left: auto
-  margin-right: auto
-  left: 0
-  right: 0
-  overflow: hidden
-  color: $brand-light-gray
-  div
-    text-align: center
-    margin: 15px 0px
-  i
-    vertical-align: middle
-  span
-    font-size: 1em
-    display: inline
-    padding: 10px
-  @media (max-width: $screen-xs-max)
-    display: none
-
 .download-buttons
   margin-top: 20px
   img
     width: 160px
 
-// Second Section (what we do)
-.what-we-do
-  p
-    font-family: $font-prelo-extra-light
-    font-size: 27px
-    color: $brand-gray
-    line-height: 27px
-    font-weight: 100
-  h4
-    text-align: justify
-  .services
-    @extend .section-template
-    padding: 60px 0 0
-    h2
-      text-align: center
-      margin-top: 0
-      margin-bottom: 24px
-    h5
-      text-align: center
-      margin-bottom: 35px
-    ul.services-list
-      padding-left: 0
-      list-style: none
-      li.service-item
-        padding-left: 40px
-        padding-top: 15px
-        padding-bottom: 15px
-        border-bottom: 1px solid #DEDEDE
-        font-family: $font-prelo-light
-        font-size: 17px
-        color: $brand-text-gray
-        &:last-child
-          border: none
-        &:before
-          content: ''
-          width: 22px
-          height: 23px
-          position: absolute
-          left: 17px
-          background-size: contain
-          background-position: center center
-          background-repeat: no-repeat
-      &.left
-        li.service-item
-          &:nth-child(1):before
-            background-image: url(../images/maid-service-icon.svg)
-          &:nth-child(2):before
-            background-image: url(../images/dry-cleaning-icon.svg)
-          &:nth-child(3):before
-            background-image: url(../images/repair-icon.svg)
-          &:nth-child(4):before
-            background-image: url(../images/tutor-icon.svg)
-      &.middle
-        li.service-item
-          &:nth-child(1):before
-            background-image: url(../images/food-icon.svg)
-          &:nth-child(2):before
-            background-image: url(../images/gifts-icon.svg)
-          &:nth-child(3):before
-            background-image: url(../images/daily-essentials-icon.svg)
-          &:nth-child(4):before
-            background-image: url(../images/dog-food-icon.svg)
-      &.middle-right
-        li.service-item
-          &:nth-child(1):before
-            background-image: url(../images/trip-planning-icon.svg)
-          &:nth-child(2):before
-            background-image: url(../images/advice-icon.svg)
-          &:nth-child(3):before
-            background-image: url(../images/how-to-icon.svg)
-          &:nth-child(4):before
-            background-image: url(../images/translating-icon.svg)
-      &.right
-        li.service-item
-          &:nth-child(1):before
-            background-image: url(../images/restaurant-icon.svg)
-          &:nth-child(2):before
-            background-image: url(../images/event-icon.svg)
-          &:nth-child(3):before
-            background-image: url(../images/vacation-icon.svg)
-          &:nth-child(4):before
-            background-image: url(../images/hotel-icon.svg)
-
-  @media(min-width: $screen-sm)
-    .services
-      h2
-        margin-bottom: 100px
-  @media(max-width: $screen-xs-max)
-    .services
-      h5
-        margin-bottom: 15px
-      .services-list
-        margin-bottom: 40px
-
-// SMS
 .sms
   @extend .section-template
-  background-color: #F3F3F3
   h2
     margin-top: 0
   .message-bubbles
     .message-left
       max-width: 350px
-      background-color: #FFF
+      background-color: $brand-light-gray
       border-radius: 10px
       padding: 10px 13px
       clear: right
@@ -521,31 +454,23 @@ header.navbar
       .message-right
         width: 80%
 
-.app-description
+.what-we-do
+  @extend .section-template
+  .fa
+    .active
+      color: $brand-yellow
+    &:hover
+      cursor: pointer
+      color: $brand-yellow
+
+.app-download
   @extend .section-template
   @media (min-width: $screen-sm)
-    background: url('/images/text-us-background.jpg') center center no-repeat
+    background: url("/images/app-screenshot.png") right 10% bottom -30px no-repeat $brand-light-gray
+    background-size: contain
 
-.soon
+.bottom-action
   @extend .section-template
-  background-color: $brand-light-gray
-  @media (min-width: $screen-sm)
-    background: url('/images/laptop-background.jpg') center no-repeat
-
-.vacation
-  @extend .section-template
-  p:last-of-type
-    margin-bottom: 70px
-  @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
-    background: url('/images/vacation-background.jpg') no-repeat
-    background-position: left 300px top -120px
-  @media (min-width: $screen-md) and (max-width: $screen-md-max)
-    background: url('/images/vacation-background.jpg') 100px no-repeat
-    background-position: left 200px top -120px
-  @media (min-width: $screen-lg)
-    background: url('/images/vacation-background.jpg') no-repeat
-    background-position: right top -330px
-
 
 
 // Footer
@@ -620,7 +545,7 @@ footer
   text-decoration: none !important
   &:before
     @include transition (all .3s)
-    content: '\f105'
+    content: "\f105"
     position: absolute
     left: 15px
     width: 15px
@@ -636,14 +561,6 @@ footer
     @include transition (all 0s)
     left: -30px
     opacity: 0
-
-.dismiss
-  @include transition(all .3s)
-  position: absolute
-  top: 15px
-  right: 15px
-  &:hover
-    color: $brand-light-gray
 
 .google-form-modal
   button.close
@@ -706,7 +623,7 @@ footer
   position: absolute
   width: 100%
   z-index: 9999
-  background: url('/images/bg.png')
+  background: url("/images/bg.png")
   background-size: cover
   background-position: bottom center
   background-color: $brand-yellow
