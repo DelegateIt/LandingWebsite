@@ -67,7 +67,6 @@ $icon-font-path: "../fonts/"
 .section-template
   padding: 90px 0
   p
-    text-align: justify
     margin-bottom: 20px
   @media (max-width: $screen-xs-max)
     padding: 30px 20px
@@ -271,7 +270,7 @@ header.navbar
   border-radius: 5px
   overflow: auto
   outline: 1px
-  padding: 8px 5px 8px 68px
+  padding: 8px 5px 8px 74px
   background: url("/images/phone2.png") no-repeat #fff
   background-size: contain
   &.bottom-input
@@ -336,40 +335,63 @@ header.navbar
     top: 50%
     transform: translateY(-50%)
     width: 100%
-  background: url("/images/sports.jpg") center center no-repeat
-  // background: url("/images/woman.jpg") left center no-repeat
+  background: url("/images/woman-on-phone.jpg") left center no-repeat
   background-size: cover
   .hero-content
     p
       font-family: $font-prelo-light
-      font-size: 22px
-      color: #FFFFFF
+      font-size: 18px
+      color: $brand-light-gray
       margin-bottom: 50px
-      &.big-text
-        font-size: 80px
-        margin-bottom: 0px
+      max-width: 80%
+      margin: 0 auto 80px auto
+    h1
+      color: $brand-light-gray
+      font-size: 34px
+      margin-bottom: 10px
     .btn-brand
       font-size: 24px
       min-width: 265px
       &:focus
         color: white
         background: transparent
-
-  @media (min-width: $screen-sm)
-    //nothing
-  @media (max-width: $screen-xs-max)
-    .hero-content
-      padding: 0
+    @media (min-width: $screen-sm - 200)
+      h1
+        font-size: 50px
       p
-        font-size: 24px
-        &.big-text
-          font-size: 36px
-          line-height: 44px
-          margin-bottom: 30px
+        max-width: 65%
+    @media (min-width: $screen-sm)
+      h1
+        font-size: 60px
+    @media (min-width: $screen-sm)
+      h1
+        font-size: 70px
+      p
+        font-size: 22px
   @media (min-width: $screen-xs-max + 1)
     background-position: center top
   @media (min-width: $screen-lg-min)
     min-height: 800px
+
+.testimonial-selector
+  i.fa
+    &.active
+      color: $brand-yellow
+    &:hover
+      cursor: pointer
+      color: $brand-yellow
+  @media (min-width: $screen-md)
+    margin-top: 0px
+    margin-left: 20px
+
+.testimonial
+  margin-top: 100px
+  .testimonial-image
+    width: 70px
+    height: 70px
+    border-radius: 35px
+  .testimonial-name
+    font-weight: 300
 
 .click-scroll-down
   color: $brand-light-gray
@@ -456,12 +478,8 @@ header.navbar
 
 .what-we-do
   @extend .section-template
-  .fa
-    .active
-      color: $brand-yellow
-    &:hover
-      cursor: pointer
-      color: $brand-yellow
+  .margin-bottom
+    margin-bottom: 100px
 
 .app-download
   @extend .section-template

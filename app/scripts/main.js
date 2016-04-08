@@ -79,7 +79,6 @@
       e.preventDefault();
       $(this).hide();
     });
-
     $('.return-to-top').on('click', function(e) {
       e.preventDefault();
       $(window).scrollTo(0, 500);
@@ -135,6 +134,68 @@
       reset($(this), action);
       validate($(this), action);
     });
+
+    // Testimonials
+    var testimonials = [{
+      text: "I had tacos delivered from Torchy's in 20 minutes. They even let me know about their awesome secret menu.",
+      name: "James B.",
+      image: "/images/testimonials-0.jpg"
+    }, {
+      text: "I was eccstatic when DelegateIt got me a last minute reservation at Uchi!",
+      name: "Macy M.",
+      image: "/images/testimonials-1.jpg"
+    }, {
+      text: "DelegateIt booked a paddleboarding trip for us and even called a car to come take us there.",
+      name: "Alexa S.",
+      image: "/images/testimonials-2.jpg"
+    }];
+
+    testimonial_selected = false;
+    testimonial_idx = -1;
+
+    var getTestimonial = function(idx) {
+      return testimonials[idx];
+    };
+
+    var setTestimonial = function(testimonial_idx) {
+      var testimonial = getTestimonial(testimonial_idx);
+      $('.testimonial-image').fadeOut(1000, function () {
+        $('.testimonial-selector div i').removeClass('active');
+        $(this).attr('src', testimonial.image);
+        $(this).fadeIn(1000);
+      });
+      $('.testimonial-text').fadeOut(1000, function () {
+        $(this).text(testimonial.text);
+        $(this).fadeIn(1000);
+        $('.testimonial-selector-'+testimonial_idx).addClass('active');
+      });
+      $('.testimonial-name').fadeOut(1000, function () {
+        $(this).text('- ' + testimonial.name);
+        $(this).fadeIn(1000);
+      });
+    };
+
+    var chooseTestimonial = function() {
+      if (testimonial_selected === false) {
+        testimonial_idx = ++testimonial_idx % 3;
+        setTestimonial(testimonial_idx);
+      } else {
+        if (testimonial_idx !== testimonial_selected) {
+          testimonial_idx = testimonial_selected;
+          setTestimonial(testimonial_selected);
+        }
+      }
+    };
+
+    $('.testimonial-selector div i').on('click', function() {
+      window.testimonial_selected = Number($.grep(this.className.split(' '), function(v, i) {
+        return v.indexOf('testimonial-selector-') === 0;
+      })[0].substring(21));
+      chooseTestimonial();
+    });
+    setInterval(chooseTestimonial, 8000);
+    $('.testimonial-image').hide();
+    chooseTestimonial();
 
   });
 })(jQuery);
