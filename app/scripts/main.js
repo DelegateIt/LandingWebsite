@@ -197,5 +197,9 @@
     $('.testimonial-image').hide();
     chooseTestimonial();
 
+    window.onbeforeunload = function() {
+      telInput.val('');
+    };
+
   });
 })(jQuery);
