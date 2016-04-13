@@ -104,6 +104,13 @@
     };
     // initialise plugin
     telInput.intlTelInput({
+      customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+        var number = '(512) 359-3557';
+        if (selectedCountryData.dialCode !== "1") {
+          number = "+1 " + number;
+        }
+        return number;
+      },
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.8/js/utils.js"
     });
     var reset = function(input, action) {
@@ -159,17 +166,17 @@
 
     var setTestimonial = function(testimonial_idx) {
       var testimonial = getTestimonial(testimonial_idx);
-      $('.testimonial-image').fadeOut(1000, function () {
+      $('.testimonial-image').fadeOut(1000, function() {
         $('.testimonial-selector div i').removeClass('active');
         $(this).attr('src', testimonial.image);
         $(this).fadeIn(1000);
       });
-      $('.testimonial-text').fadeOut(1000, function () {
+      $('.testimonial-text').fadeOut(1000, function() {
         $(this).text(testimonial.text);
         $(this).fadeIn(1000);
-        $('.testimonial-selector-'+testimonial_idx).addClass('active');
+        $('.testimonial-selector-' + testimonial_idx).addClass('active');
       });
-      $('.testimonial-name').fadeOut(1000, function () {
+      $('.testimonial-name').fadeOut(1000, function() {
         $(this).text('- ' + testimonial.name);
         $(this).fadeIn(1000);
       });
