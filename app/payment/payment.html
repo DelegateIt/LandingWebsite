@@ -50,9 +50,10 @@
   <!-- build:js scripts/vendor/underscore.js -->
   <script src="/bower_components/underscore/underscore.js"></script>
   <!-- endbuild -->
-  <!-- <script type="text/javascript">
-    window.location.href = "/properties"
-  </script> -->
+
+  <style>
+    .ng-cloak { display: none; }
+  </style>
 </head>
 
 <body class="home" ng-app="app" ng-controller="mainCtrl">
@@ -85,9 +86,7 @@
           </div>
         </noscript>
         <div class="row">
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-4 ng-cloak">
+          <div class="col-md-4 col-md-offset-4 ng-cloak">
             <div ng-hide="errorMsg == ''" class="alert alert-danger text-center">
               {{ errorMsg }}
             </div>
@@ -112,11 +111,9 @@
               </div>
               <div class="panel-footer">
                 <button ng-click="onPayBtnClick($event)" ng-disabled="isPayBtnDisabled()" class="btn btn-primary">Purchase</button>
-                <img ng-show="loading" src="spiffygif_28x28.gif" alt="Loading...">
+                <img class="ng-cloak" ng-show="loading" src="loading.gif" alt="Loading...">
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
           </div>
         </div>
       </div>
