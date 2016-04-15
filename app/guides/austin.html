@@ -13,6 +13,7 @@
   <!-- bower:css -->
   <link href="/bower_components/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
   <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/bower_components/intl-tel-input/build/css/intlTelInput.css" rel="stylesheet">
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -87,8 +88,16 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="hero-content section-intro">
-                <p class="big-text">Austin, Texas</p>
+                <h1>Austin, Texas</h1>
                 <p>A travel guide</p>
+
+                <div class="phone-wrapper">
+                  <div class="phone-group">
+                    <input class="phone" type="tel">
+                    <a class="phone-action hidden">Get Started!</a>
+                  </div>
+                  <p><small class="phone-info">Enter your number to get started</small></p>
+                </div>
               </div>
             </div>
           </div>
@@ -96,11 +105,12 @@
       </div>
 
       <div class="click-scroll-down">
+        <!-- <a href="#sms">Scroll to learn more</a> -->
         <a href="#sms">SCROLL</a>
         <i class="fa fa-chevron-down bounce"></i>
       </div>
+    </section>
   </div>
-  </section>
 
   <section class="section-template bg-gray">
     <div class="container">
@@ -108,7 +118,7 @@
         <div class="col-xs-12">
           <h2>SO I’M IN <b>AUSTIN</b>...WHAT NOW?</h2>
           <p class="inner-content-margin-bottom limited-width">Austin is known for its <i>weird</i> culture and it’s a city filled with exciting things to do! We compiled a list of all our favorites just for you. If you have any questions about our suggestions, need directions, or if you simply need a ride,
-            send us a text at <b class="phone">(512)&nbsp;359-3557</b>!</p>
+            send us a text at <b class="text-us">(512)&nbsp;359-3557</b>!</p>
         </div>
       </div>
     </div>
@@ -189,7 +199,8 @@
 
   <style>
     #hero {
-      background: url("/images/austin-soco3.jpg") center center no-repeat !important;
+      background: url("/images/butter.jpg") center center no-repeat !important;
+      background-size: cover !important;
     }
   </style>
 
@@ -214,6 +225,7 @@
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
   <script src="/bower_components/lightbox2/dist/js/lightbox.js"></script>
+  <script src="/bower_components/intl-tel-input/build/js/intlTelInput.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
