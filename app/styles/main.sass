@@ -292,6 +292,11 @@ header.navbar
 .hero .phone
   border-color: $brand-blue
 
+.intl-tel-input.allow-dropdown input,
+.intl-tel-input.allow-dropdown input[type=text],
+.intl-tel-input.allow-dropdown input[type=tel]
+  padding-left: 90px
+
 .phone
   margin: auto
   width: 320px
@@ -301,7 +306,7 @@ header.navbar
   font-size: 18px
   overflow: auto
   outline: 1px
-  padding: 10px 5px 10px 75px
+  padding: 10px 5px 10px 85px
   &.bottom-input
     border-width: 1px !important
   &.invalid
@@ -493,7 +498,7 @@ header.navbar
 
 // Footer
 footer
-  padding: 30px 0px 5px 0
+  padding: 30px 0px 0px 0px
   img
     margin-top: 0 !important
   a
@@ -501,21 +506,23 @@ footer
     font-size: 1.2rem
   a:not(.brand)
     margin: 0 7px
+  &.lowered
+    margin-top: 200px
   .brand
     text-align: center
     float: none
-    padding-left: 20px
   .footer-links
     text-align: center
     float: none
     a:last-child
       margin-right: 0
   .footer-social-media
-    padding-left: 20px
     i
       color: #000
       font-size: 22px
   @media (max-width: $screen-xs-max)
+    .footer-links
+      margin-left: -20px
     .footer-links a
       margin: 0 10px
     .brand
@@ -625,9 +632,21 @@ footer
     position: fixed
     bottom: -30px
 
-.privacy
+.privacy,
+.payment
   margin-top: 120px
   margin-bottom: 60px
+
+.payment
+  .btn-primary
+    background-color: $brand_yellow
+    color: #fff
+    border: 1px solid $brand-warning
+    text-transform: uppercase
+    width: 100%
+    &:hover
+      background-color: $brand-warning
+      border: 1px solid $brand_yellow
 
 .action-panel
   margin-top: 30px
