@@ -103,7 +103,7 @@
               </ul>
               <div ng-hide="receipt == null" class="panel-body">
                 <div>
-                  <label>Total</label>: ${{ receipt.total / 100 }}</div>
+                  <label>Total</label>: ${{ (receipt.total / 100).toFixed(2) }}</div>
                 <div ng-hide="typeof(receipt.notes) != 'undefined'" style="padding-top:15px">
                   <label>Notes:</label>
                   <pre style="word-wrap:normal">{{ receipt.notes }}</pre>
