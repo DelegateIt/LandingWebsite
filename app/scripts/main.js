@@ -3,6 +3,7 @@
 
     // Hide Elements
     $('.sticky').hide().removeClass('no-opacity');
+    $('#return-to-top').hide().removeClass('no-opacity');
     $('#return-to-top').hide();
     $('.how-it-works-block-wrapper').hide().removeClass('no-opacity');
 
