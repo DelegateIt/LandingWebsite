@@ -70,7 +70,13 @@ gulp.task('properties', ['styles'], () => {
 gulp.task('payment', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/payment/*')
+  return gulp.src('app/payment/**/*')
+    .pipe(assets)
+    .pipe($.if('*.js', $.uglify()))
+    .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
+    .pipe(assets.restore())
+    .pipe($.useref())
+    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist/payment'));
 });
 
@@ -90,7 +96,8 @@ gulp.task('images', () => {
       this.end();
     })))
     .pipe(gulp.dest('dist/images'))
-    .pipe(gulp.dest('dist/properties/images'));
+    .pipe(gulp.dest('dist/properties/images'))
+    .pipe(gulp.dest('dist/payment/images'));
 });
 
 gulp.task('flag-icons', () => {
@@ -115,7 +122,8 @@ gulp.task('fonts', () => {
   }).concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'))
-    .pipe(gulp.dest('dist/properties/fonts'));
+    .pipe(gulp.dest('dist/properties/fonts'))
+    .pipe(gulp.dest('dist/payment/fonts'));
 });
 
 gulp.task('extras', () => {
